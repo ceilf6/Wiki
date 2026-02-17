@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        .ball {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #f00;
+            position: absolute;
+            left: 0;
+            top: 50px;
+            animation: move 10s infinite alternate;
+        }
+
+        @keyframes move {
+
+            /* 通过 left 实现移动 */
+            0% {
+                left: 0px;
+            }
+
+            100% {
+                left: 500px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <button id="btn">执行耗时同步 5s 的 JS 代码</button>
+    <div class="ball"></div>
+    <script>
+        function notSyncDelay(duration) {
+            var start = Date.now();
+            while (Date.now() - start < duration) { }
+        }
+        btn.onclick = function () {
+            notSyncDelay(5000);
+        };
+    </script>
+</body>
+
+</html>
