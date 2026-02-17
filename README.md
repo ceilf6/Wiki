@@ -139,3 +139,4 @@
 - [上下文旧版API childContextTypes, getChildContext 创建上下文 contextTypes 获取上下文](https://github.com/ceilf6/Lab/commit/ef0729e6273c145bc97274df641a477404f95531)
 - [Context 数据变化时，所有消费者强制更新直接不运行 shouldComponentUpdate setState 被调用时，创建的是一个新对象（即使什么都没有变），那么上下文在比较时（通过Object.is比较引用内存地址）会判断二者不一致、 解决方案：包一层 ctx 后，后面更新 setState({}) => 只影响了 state 但是内部的 ctx 的地址没有变化](https://github.com/ceilf6/Lab/commit/22ff1e07f6ba64fbccc8489418dc2eae83bd2367)
 - [旧版效率问题严重，新版上下文API Provider, Consumer/useContext 生产者消费者模式](https://github.com/ceilf6/Lab/commit/350f5333144244f0f57539847bf2950c27ad263e)
+- [通过上下文实现组件之间的联动 - 基础功能的表单组件Form Form.Input Form.Button](https://github.com/ceilf6/Lab/commit/b35672fc29d1b873bb9f0172a13452b3bb29ad88)
