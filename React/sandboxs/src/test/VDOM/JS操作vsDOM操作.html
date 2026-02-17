@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // JS 层面的计算速度要高于 DOM 层面的计算速度
+
+    console.log("=== DOM");
+    console.time();
+    const arr = [];
+    // 创建 10000 个 DOM 对象
+    for (let i = 0; i < 100000; i++) {
+      arr.push(document.createElement("div"));
+    }
+    console.timeEnd();
+
+    console.log();
+    console.log("=== JS Obj");
+    console.time();
+    const arr2 = [];
+    // 创建 10000 JS 对象
+    for (let i = 0; i < 100000; i++) {
+      arr2.push({
+        tag: "div",
+      });
+    }
+    console.timeEnd();
+  </script>
+</body>
+
+</html>
