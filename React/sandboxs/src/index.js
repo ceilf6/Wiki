@@ -56,6 +56,67 @@ import ReactDOM from 'react-dom';
 //     <AppOldLifeCylcle />
 // )
 
-import App from './App'
 
-ReactDOM.render(<App />, document.getElementById('root'))
+import App from './App'
+// ReactDOM.render(<App />, document.getElementById('root'))
+
+import ClassCompRender from './test/ClassCompRender'
+const app = <div className="prop">
+    <h1>
+        标题
+        {["abc", null, <p>段落</p>]}
+    </h1>
+    <p>
+        {undefined}
+    </p>
+    <ClassCompRender />
+</div>;
+
+function setProps(dom, props = {}) {
+    for (const [key, value] of Object.entries(props)) {
+        if (key === 'children' || value == null) continue;
+
+        if (key === 'className') {
+            dom.setAttribute('class', value);
+        } else if (key === 'style' && typeof value === 'object') {
+            Object.assign(dom.style, value);
+        } else if (/^on[A-Z]/.test(key) && typeof value === 'function') {
+            const eventName = key.slice(2).toLowerCase();
+            dom.addEventListener(eventName, value);
+        } else if (key in dom) {
+            dom[key] = value;
+        } else {
+            dom.setAttribute(key, String(value));
+        }
+    }
+}
+function render(vnode, container) {
+    if (Array.isArray(vnode)) {
+        vnode.forEach(child => render(child, container));
+        return;
+    }
+
+    if (vnode == null || typeof vnode === 'boolean') return;
+
+    if (typeof vnode === 'string' || typeof vnode === 'number') {
+        container.appendChild(document.createTextNode(String(vnode)));
+        return;
+    }
+
+    if (typeof vnode.type === 'function') {
+        render(vnode.type(vnode.props || {}), container);
+        return;
+    }
+
+    if (!vnode || typeof vnode !== 'object' || !vnode.type) return;
+
+    const dom = document.createElement(vnode.type);
+    setProps(dom, vnode.props);
+    render(vnode.props?.children, dom); // 直接递归，不手动包一层 list
+    container.appendChild(dom);
+}
+// const root = document.getElementById('root');
+// render(app, root);
+
+console.log(app)
+ReactDOM.render(app, document.getElementById('root'));
