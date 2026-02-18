@@ -1,3 +1,5 @@
+// 由 Reconciler 生成 Fiber 对象 => hook、副作用、flags 处理，diff判断
+
 const createFiber = function (tag, pendingProps, key, mode) {
   // 创建 fiber 节点的实例对象
   return new FiberNode(tag, pendingProps, key, mode);
