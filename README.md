@@ -144,3 +144,4 @@
 - [react渲染 - React元素 在 执行React Component 后得到 虚拟DOM树 React Element => 执行React Component => Reconciler diff(Fiber) => Commit => Real DOM 手动模拟实现递归渲染](https://github.com/ceilf6/Lab/commit/ea7fde3bebc4b946ad4d50ff72118fde2fb4ecfb)
 - [虚拟DOM编程思想 => 框架在内存中实现为JS对象, 如React17之前的createElement和17之后的jsx-runtime方法返回的对象](https://github.com/ceilf6/Lab/commit/fb2fd3b0287f22fff529e270c5dbf8f783e44098)
 - [Fiber, Reconciler from stack => **time slice** ; Scheduler => tasks priority](https://github.com/ceilf6/Lab/commit/24078192d3000258c69178f6af0a0aa7f0815f97)
+- [模拟 React ARCH Scheduler => priority requestIdleCallback 这个 API 有兼容性问题 [scheduler源码](https://github.com/facebook/react/tree/main/packages/scheduler) - ```npm install scheduler```](https://github.com/ceilf6/Lab/commit/f060289c20bf74a4bf4dc36a3b5e94e54a997ca0)
