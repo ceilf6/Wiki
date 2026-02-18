@@ -145,3 +145,4 @@
 - [虚拟DOM编程思想 => 框架在内存中实现为JS对象, 如React17之前的createElement和17之后的jsx-runtime方法返回的对象](https://github.com/ceilf6/Lab/commit/fb2fd3b0287f22fff529e270c5dbf8f783e44098)
 - [Fiber, Reconciler from stack => **time slice** ; Scheduler => tasks priority](https://github.com/ceilf6/Lab/commit/24078192d3000258c69178f6af0a0aa7f0815f97)
 - [模拟 React ARCH Scheduler => priority ; requestIdleCallback 这个 API 有兼容性问题](https://github.com/ceilf6/Lab/commit/f060289c20bf74a4bf4dc36a3b5e94e54a997ca0) [scheduler源码](https://github.com/facebook/react/tree/main/packages/scheduler) - ```npm install scheduler```
+- [React ARCH 模拟 performUnitOfWork 创建下一个 FiberNode 对象，并且进行链表连接](https://github.com/ceilf6/Lab/commit/7f17db7c40a4b5f4eeb87ababdc95d70424b146c)
