@@ -153,3 +153,4 @@
 
 - [Scheduler 源码分析: requestHostCallback => schedulePerformWorkUntilDeadline 根据不同的环境选择不同的生成宏任务的方式，大多数是实例化 MessageChannel 进行后续调度](https://github.com/ceilf6/Lab/commit/d21e3399fae5f68cf84fe7a62b80654f3e5a9e3b)
 - [Scheduler 源码分析: performWorkUntilDeadline 浏览器宏任务里的调度入口](https://github.com/ceilf6/Lab/commit/cc5ac2d3dba251c086116fe79e4c0a96a23d66b7)
+- [Scheduler 源码分析: flushWork => workLoop workLoop 首先有一个 while 循环，该 while 循环保证了能够从任务队列中不停的取任务出来 任务还没有过期 && 任务暂停、归还主线程渲染时break 根据 taskQueue => timerQueue 返回布尔值给 hasMoreWork](https://github.com/ceilf6/Lab/commit/c18040520485cf1ad72c01811fd1cdcd90f53d36)
