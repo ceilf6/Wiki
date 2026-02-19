@@ -152,3 +152,4 @@
 - [通过 githook 钩子配置实现自动跟随子模块提交](https://github.com/ceilf6/Lab/commit/52144dd5121dee78cc9b61e83b67582378b0d8d0)
 
 - [Scheduler 源码分析: requestHostCallback => schedulePerformWorkUntilDeadline 根据不同的环境选择不同的生成宏任务的方式，大多数是实例化 MessageChannel 进行后续调度](https://github.com/ceilf6/Lab/commit/d21e3399fae5f68cf84fe7a62b80654f3e5a9e3b)
+- [Scheduler 源码分析: performWorkUntilDeadline 浏览器宏任务里的调度入口](https://github.com/ceilf6/Lab/commit/cc5ac2d3dba251c086116fe79e4c0a96a23d66b7)
