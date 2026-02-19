@@ -40,5 +40,8 @@ ZSHEOF
 fi
 
 chmod +x "$HOOK_SCRIPT"
-echo ">>> 完成！请重新打开终端或执行 source ~/.zshrc 使配置生效。"
-echo ">>> 之后在 React/source 执行 git push 会自动同步 Lab 父仓库。"
+chmod +x "$REPO_ROOT/.githooks/git-wrapper.sh"
+echo ">>> git 包装脚本已就绪，VS Code 将通过 .vscode/settings.json git.path 自动使用它"
+
+echo ">>> 完成！重新加载 VS Code 窗口（Cmd+Shift+P → Reload Window）即可生效。"
+echo ">>> 之后在 React/source 通过侧边栏或终端 git push 都会自动同步 Lab 父仓库。"
