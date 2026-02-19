@@ -148,3 +148,4 @@
 - [React ARCH 模拟 performUnitOfWork 创建下一个 FiberNode 对象，并且进行链表连接](https://github.com/ceilf6/Lab/commit/7f17db7c40a4b5f4eeb87ababdc95d70424b146c)
 - [MessageChannnel API => macrotask => Scheduler 目标是利用事件循环机制，将上一次被渲染打断的JS任务继续执行 - setTimeout 嵌套层次多后有 4ms clamping - requestAnimationFrame 只能在渲染前执行，rAF 必须等到下一帧 - microtask 通过 Promise 包装成一个微任务，但是微任务队列需要清空后才能渲染，浏览器渲染等不了那么久](https://github.com/ceilf6/Lab/commit/33451f8e00083cb9f6606d484669431c6b1aa668)
 - [Scheduler source React ARCH](https://github.com/ceilf6/Lab/commit/3ea90c87be8994a9564655d8ba7af649d2e826de)
+- [Scheduler 调度任务 unstable_scheduleCallback taskQueue普通任务, timerQueue延时任务](https://github.com/ceilf6/Lab/commit/4ca4d64af37ef08b51965a90f4461163fe575b6a)
