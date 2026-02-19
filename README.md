@@ -146,3 +146,4 @@
 - [Fiber, Reconciler from stack => **time slice** ; Scheduler => tasks priority](https://github.com/ceilf6/Lab/commit/24078192d3000258c69178f6af0a0aa7f0815f97)
 - [模拟 React ARCH Scheduler => priority ; requestIdleCallback 这个 API 有兼容性问题](https://github.com/ceilf6/Lab/commit/f060289c20bf74a4bf4dc36a3b5e94e54a997ca0) [scheduler源码](https://github.com/facebook/react/tree/main/packages/scheduler) - ```npm install scheduler```
 - [React ARCH 模拟 performUnitOfWork 创建下一个 FiberNode 对象，并且进行链表连接](https://github.com/ceilf6/Lab/commit/7f17db7c40a4b5f4eeb87ababdc95d70424b146c)
+- [MessageChannnel API => macrotask => Scheduler 目标是利用事件循环机制，将上一次被渲染打断的JS任务继续执行 - setTimeout 嵌套层次多后有 4ms clamping - requestAnimationFrame 只能在渲染前执行，rAF 必须等到下一帧 - microtask 通过 Promise 包装成一个微任务，但是微任务队列需要清空后才能渲染，浏览器渲染等不了那么久](https://github.com/ceilf6/Lab/commit/33451f8e00083cb9f6606d484669431c6b1aa668)
