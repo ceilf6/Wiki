@@ -161,3 +161,4 @@
 - [Scheduler 流程图](https://github.com/ceilf6/Lab/commit/88cd2f08de48e7911df3c66f59a20ea9cb3715c5)
 - [Scheduler 源码分析: MinHeap](https://github.com/ceilf6/Lab/commit/c8fb951917f65f9f01839478e3068102563ae036)
 - [React位运算源码分析: - FiberNode flags 合并变更状态、判断 - lanes & -lanes 取最高优先级 - Context 上下文判断等等](https://github.com/ceilf6/Lab/commit/562de5acf6345f9edc32f264d37b0d2ff49e07bf)
+- [Reconciler 源码分析: beginWork](https://github.com/ceilf6/Lab/commit/b7c6f102b00a4769d289fce48d1abb3d35fdeda4)
