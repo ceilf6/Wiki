@@ -164,3 +164,4 @@
 - [Reconciler 源码分析: beginWork](https://github.com/ceilf6/Lab/commit/b7c6f102b00a4769d289fce48d1abb3d35fdeda4)
 - [Reconciler 源码分析: completeWork - mount阶段三步 ReactFiberConfig => HostConfig](https://github.com/ceilf6/Lab/commit/f5d99560957ce17e113b982c5b097ae876ade500)
 - [Reconciler 源码分析: completeWork - update阶段 diffProperties](https://github.com/ceilf6/Lab/commit/79543b7d2d40ddae8e180a24fe5ee1af67f6ff35)
+- [Reconciler 源码分析: completeWork - flags冒泡 => 快速确定 FiberNode 以及子树是否存在副作用 => 判断是否需要执行和副作用相关的操作](https://github.com/ceilf6/Lab/commit/e902c27d22128fea941542669ee834863eb0b17f)
