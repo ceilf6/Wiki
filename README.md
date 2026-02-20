@@ -156,3 +156,4 @@
 - [Scheduler 源码分析: flushWork => workLoop workLoop 首先有一个 while 循环，该 while 循环保证了能够从任务队列中不停的取任务出来 任务还没有过期 && 任务暂停、归还主线程渲染时break 根据 taskQueue => timerQueue 返回布尔值给 hasMoreWork](https://github.com/ceilf6/Lab/commit/c18040520485cf1ad72c01811fd1cdcd90f53d36)
 - [Scheduler 源码分析: shouldYieldToHost 判断任务执行阻塞时间是否会导致丢帧、需要归还主线程](https://github.com/ceilf6/Lab/commit/e44e012f2f6a97a4f152a6282318213fe58a8d71)
 - [Scheduler 源码分析: advanceTimers 遍历 timerQueue 判断是否有已经到期的任务，如果有、将这个任务放入到 taskQueue](https://github.com/ceilf6/Lab/commit/9d197a8e06513b4ad56e59411629a293f0622008)
+- [Scheduler 源码分析: 延时任务调度 unstable_scheduleCallback => requestHostTimeout](https://github.com/ceilf6/Lab/commit/28e81a470f6807c26d9730495ef7b1b7b313fc03)
