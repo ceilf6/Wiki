@@ -17,8 +17,8 @@ cd "$PARENT_DIR" || exit 1
 # 先拉取远端最新，避免 non-fast-forward 推送失败（merge 保留历史）
 git pull --no-rebase
 
-# 更新子模块指针
-git add React/source
+# 暂存 Lab 中所有变更（包括子模块指针及其他未提交内容）
+git add -A
 
 # 检查是否有变更需要提交
 if git diff --cached --quiet; then
