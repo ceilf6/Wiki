@@ -158,3 +158,4 @@
 - [Scheduler 源码分析: advanceTimers 遍历 timerQueue 判断是否有已经到期的任务，如果有、将这个任务放入到 taskQueue](https://github.com/ceilf6/Lab/commit/9d197a8e06513b4ad56e59411629a293f0622008)
 - [Scheduler 源码分析: 延时任务调度 unstable_scheduleCallback => requestHostTimeout](https://github.com/ceilf6/Lab/commit/28e81a470f6807c26d9730495ef7b1b7b313fc03)
 - [Scheduler 源码分析: => handleTimeout](https://github.com/ceilf6/Lab/commit/496b0ee7b847175381a79872cb9ee7945d0c2512)
+- [Scheduler 流程图](https://github.com/ceilf6/Lab/commit/88cd2f08de48e7911df3c66f59a20ea9cb3715c5)
