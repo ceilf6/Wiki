@@ -166,3 +166,4 @@
 - [Reconciler 源码分析: completeWork - update阶段 diffProperties](https://github.com/ceilf6/Lab/commit/79543b7d2d40ddae8e180a24fe5ee1af67f6ff35)
 - [Reconciler 源码分析: completeWork - flags冒泡 => 快速确定 FiberNode 以及子树是否存在副作用 => 判断是否需要执行和副作用相关的操作](https://github.com/ceilf6/Lab/commit/e902c27d22128fea941542669ee834863eb0b17f)
 - [Reconciler 源码分析: 单节点diff, 多节点diff](https://github.com/ceilf6/Lab/commit/ff41670c611bbe0ad7d07440032a2a76abdfb99d)
+- [commit 源码分析: - commitXXXEffects - commitXXXEffects_begin - commitXXXEffects_complete 删除逻辑链条迁移 commitMutationEffectsOnFiber ⇒ recursivelyTraverseMutationEffects ⇒ commitDeletionEffects ⇒ commitDeletionEffectsOnFiber](https://github.com/ceilf6/Lab/commit/2928da321e47aaffa128916b82ac5d8942e79c64)
