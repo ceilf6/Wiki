@@ -1,6 +1,8 @@
 import React from 'react'; // 虽然也许可能没有使用，如果删了就会报错React.createElement
 import ReactDOM from 'react-dom';
 
+import ClassCompRender from './test/ClassCompRender'
+
 // import './test/test1'
 // import './test/toggleImg'
 
@@ -58,9 +60,9 @@ import ReactDOM from 'react-dom';
 
 
 import App from './App'
-// ReactDOM.render(<App />, document.getElementById('root'))
+ReactDOM.render(<App />, document.getElementById('root'))
 
-import ClassCompRender from './test/ClassCompRender'
+
 const app = <div className="prop">
     <h1>
         标题
@@ -118,5 +120,5 @@ function render(vnode, container) {
 // const root = document.getElementById('root');
 // render(app, root);
 
-console.log(app)
-ReactDOM.render(app, document.getElementById('root'));
+// console.log(app)
+// ReactDOM.render(app, document.getElementById('root'));
