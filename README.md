@@ -170,3 +170,4 @@
 - [commit 源码分析: Mutation - 2. 插入、移动Placement flag - 3. 更新属性 Layout - 负责执行类组件生命周期钩子函数、useLayoutEffect...](https://github.com/ceilf6/Lab/commit/4270ec540780ead06e14760760fdf8e1d37f9e61)
 - [lane 源码分析: 优先级调度](https://github.com/ceilf6/Lab/commit/440723296c96c86a36bcac073f6358b31c27da89)
 - [实现 合成事件对象 & 事件传播机制 模拟 ReactDOM 中的事件系统](https://github.com/ceilf6/Lab/commit/305ece15fe5f19a2e38cfc24e3e568918ef0b20f)
+- [Hooks 源码分析: hook对象 => 链表 执行流程](https://github.com/ceilf6/Lab/commit/fcaa3aad117f02515b4fab201b2a5166d1918818)
