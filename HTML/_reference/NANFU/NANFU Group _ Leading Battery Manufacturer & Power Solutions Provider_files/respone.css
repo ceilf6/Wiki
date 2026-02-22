@@ -1,0 +1,13 @@
+.home .banner .inner .part>.col h2 b{font-weight: 600;}
+.about .r1 .bg .pic{background-position: center bottom;}
+@media screen and (orientation : landscape){
+    .home .r3 .inner .photo .box .chunk .msg .topic .lineBox.left{
+        left: calc(100% + .4rem);
+    }
+    .tech .r1 .clear .photo .box .chunk .msg .topic .lineBox.left{
+        left: calc(100% + .4rem);
+    }
+    #buyPop .group .inner .part .box{
+        height: calc(100% - 1rem);
+    }
+}
