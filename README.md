@@ -187,3 +187,4 @@
 - [bailout策略 源码分析: 第二次命中机会 开发者使用性能优化API实质就是放宽bailou策略的命中条件 - React.memo - PureComponent - markWorkInProgressReceivedUpdate()](https://github.com/ceilf6/Lab/commit/f16dfea507988b85de21c0b1b5f38a8d887363dc)
 
 - 源码阅读技巧 [#8](https://github.com/ceilf6/Lab/discussions/8)
+- [V8 源码分析 执行上下文Context - VariableEnvironment var穿透块](https://github.com/ceilf6/Lab/commit/2943b794cd2a1f467f1b5619f84e09882438b79b)
