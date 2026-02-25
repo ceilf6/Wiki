@@ -14,7 +14,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "git.pullBeforePush": false,
-  "git.autofetch": true,
+  "git.autofetch": false,
   "git.rebaseWhenSync": false,
   "javascript.validate.enable": false,
   "flow.enabled": true
