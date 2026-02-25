@@ -43,5 +43,12 @@ chmod +x "$HOOK_SCRIPT"
 chmod +x "$REPO_ROOT/.githooks/git-wrapper.sh"
 echo ">>> git 包装脚本已就绪，VS Code 将通过 .vscode/settings.json git.path 自动使用它"
 
+# v8 仓库极大，fetch 时不拉取 tags，避免 pullBeforePush 时等待过久
+if [ -d "$REPO_ROOT/JS/engine-source" ]; then
+  cd "$REPO_ROOT/JS/engine-source"
+  git config remote.origin.tagOpt --no-tags
+  echo ">>> 已配置 JS/engine-source fetch 不拉取 tags"
+fi
+
 echo ">>> 完成！重新加载 VS Code 窗口（Cmd+Shift+P → Reload Window）即可生效。"
 echo ">>> 之后在 React/source 通过侧边栏或终端 git push 都会自动同步 Lab 父仓库。"
