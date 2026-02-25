@@ -191,3 +191,4 @@
 - [V8 源码分析 变量提升 "变量提升"在 V8 里根本没有一个叫 Hoist 的运行时操作——它是编译期 DeclareVariable 时选择作用域的静态决策，配合 InitializationFlag 控制运行时是否允许访问](https://github.com/ceilf6/Lab/commit/5830d47512ddd9eb56eb66195a17f558dfb4b579)
 - [V8 源码分析 词法环境 1. 编译期 — 决定哪些变量需要进 Context](https://github.com/ceilf6/Lab/commit/ad920ab4546cfb5db033f237063ebab663cbccf4)
 - [V8 源码分析 词法环境 2. 字节码生成期 — 何时创 新Context](https://github.com/ceilf6/Lab/commit/ad920ab4546cfb5db033f237063ebab663cbccf4)
+- [V8 源码分析 词法环境 3. 运行时 Context 链 — ContextScope 管理 outer 引用](https://github.com/ceilf6/Lab/commit/2d4ff28dc5a100d1c7d8cf8f0e49f97306c326d0)
