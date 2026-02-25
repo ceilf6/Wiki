@@ -188,3 +188,4 @@
 
 - 源码阅读技巧 [#8](https://github.com/ceilf6/Lab/discussions/8)
 - [V8 源码分析 执行上下文Context - VariableEnvironment var穿透块](https://github.com/ceilf6/Lab/commit/2943b794cd2a1f467f1b5619f84e09882438b79b)
+- [V8 源码分析 变量提升 "变量提升"在 V8 里根本没有一个叫 Hoist 的运行时操作——它是编译期 DeclareVariable 时选择作用域的静态决策，配合 InitializationFlag 控制运行时是否允许访问](https://github.com/ceilf6/Lab/commit/5830d47512ddd9eb56eb66195a17f558dfb4b579)
