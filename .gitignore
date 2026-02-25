@@ -21,3 +21,6 @@ env.js
 效率技巧/
 
 # .vscode/
+# 嵌套 git 仓库，不作为子模块追踪
+JS/preJS/1/
+React/sandboxs/React/source/
