@@ -1,3 +1,6 @@
 [submodule "React/source"]
 	path = React/source
 	url = https://github.com/ceilf6/react
+[submodule "JS/engine-source"]
+	path = JS/engine-source
+	url = https://github.com/ceilf6/v8
