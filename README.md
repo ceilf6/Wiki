@@ -196,3 +196,4 @@
 - [V8 源码分析 词法环境 作用域链 静态编译期 & 动态运行时](https://github.com/ceilf6/Lab/commit/1e124d00cd8ce9000a306c8445fb8384da763bde)
 - [V8 源码分析 ThisBinding this全局数据流向 四条绑定规则的底层字节码](https://github.com/ceilf6/Lab/commit/633867a28243d7f6dd8912d7c7f283d73c634eee)
 - [V8 源码分析 闭包 - 让变量的生命周期独立于调用栈 的底层实现细节](https://github.com/ceilf6/Lab/commit/145239aa9571618ec46f8693e486615aa61b73ee)
+- [V8 源码分析 垃圾回收GC 新老生代的分代处理( 内存页标志位 )，大多数对象出生在新生代 Minor GC，在存活超过一轮之后晋升为老生代 Major GC](https://github.com/ceilf6/Lab/commit/f587d8310896b380f6a5d1810087345dc14b7b71)
