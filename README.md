@@ -195,3 +195,4 @@
 - [V8 源码分析 词法环境 4. 变量读取 — 沿 Context 链查找](https://github.com/ceilf6/Lab/commit/25641cb0784053ea41c369730715e1a4dac53804)
 - [V8 源码分析 词法环境 作用域链 静态编译期 & 动态运行时](https://github.com/ceilf6/Lab/commit/1e124d00cd8ce9000a306c8445fb8384da763bde)
 - [V8 源码分析 ThisBinding this全局数据流向 四条绑定规则的底层字节码](https://github.com/ceilf6/Lab/commit/633867a28243d7f6dd8912d7c7f283d73c634eee)
+- [V8 源码分析 闭包 - 让变量的生命周期独立于调用栈 的底层实现细节](https://github.com/ceilf6/Lab/commit/145239aa9571618ec46f8693e486615aa61b73ee)
