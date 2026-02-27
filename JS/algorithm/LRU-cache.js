@@ -1,3 +1,88 @@
+function Node(key, value) {
+    this.key = key; // 记录当前节点在 cache 中的键，在 _pop 中 delete 需要用到
+    this.value = value;
+    this.pre = null;
+    this.next = null;
+}
+
+/**
+ * @param {number} capacity
+ */
+var LRUCache = function (capacity) {
+    this.cache = Object.create(null);
+    this.size = 0;
+    this.capacity = capacity
+
+    this.first = new Node(null, null) // 虚拟头
+    this.last = new Node(null, null) // 虚拟尾
+    this.first.next = this.last
+    this.last.pre = this.first
+};
+
+/* _ 开头的内部使用工具函数 */
+// 删除节点操作
+LRUCache.prototype._removeNode = function (node) {
+    const pre = node.pre;
+    const next = node.next;
+    pre.next = next;
+    next.pre = pre;
+    this.size--;
+    // 内存中删除 cur 操作（JS自动GC）
+}
+
+// 节点入队 - 链表头入队（不负责创造节点）
+LRUCache.prototype._push = function (node) {
+    const firstNext = this.first.next
+    node.pre = this.first
+    node.next = firstNext
+    firstNext.pre = node
+    this.first.next = node
+    this.size++
+}
+
+// 节点移动到队头 - 刷新地位操作：先删除节点再入队
+LRUCache.prototype._refresh = function (node) {
+    this._removeNode(node)
+    this._push(node)
+}
+
+// 链表尾出队
+LRUCache.prototype._pop = function () {
+    const lru = this.last.pre
+    if (lru === this.first) return // 空
+    this._removeNode(lru) // 删除节点操作已经对 size 进行了处理
+    delete this.cache[lru.key]
+}
+
+/** 
+ * @param {number} key
+ * @return {number}
+ */
+LRUCache.prototype.get = function (key) {
+    const node = this.cache[key]
+    if (!node) return -1
+    this._refresh(node)
+    return node.value
+};
+
+/** 
+ * @param {number} key 
+ * @param {number} value
+ * @return {void}
+ */
+LRUCache.prototype.put = function (key, value) {
+    const node = this.cache[key]
+    if (node) {
+        node.value = value
+        this._refresh(node)
+    } else {
+        const newNode = new Node(key, value)
+        this.cache[key] = newNode
+        this._push(newNode)
+        if (this.size > this.capacity) this._pop();
+    }
+};
+
 class LRUCache {
     constructor(capacity) {
         this.map = new Map()
@@ -22,88 +107,6 @@ class LRUCache {
         if (this.map.size > this.space) { // 注意是 size 而不是 length
             const last = this.map.keys().next().value; // keys().next().value
             this.map.delete(last)
-        }
-    }
-}
-
-// ============ 不使用Map的实现：使用对象 + 双向链表 ============
-
-// 双向链表节点
-class DLLNode {
-    constructor(key, value) {
-        this.key = key
-        this.value = value
-        this.pre = null
-        this.next = null
-    }
-}
-
-class LRUCache {
-    constructor(capacity) {
-        this.capacity = capacity
-        this.cache = {} // 对象存储 key -> node 的映射
-        this.size = 0
-
-        // 虚拟头尾节点，方便操作
-        this.head = new DLLNode(0, 0) // head.next 才是头
-        this.tail = new DLLNode(0, 0) // tail.pre 才是尾
-        this.head.next = this.tail
-        this.tail.pre = this.head
-    }
-
-    // 将节点添加到头部 - 头部是最近使用的
-    addToHead(node) {
-        node.pre = this.head
-        node.next = this.head.next
-        this.head.next.pre = node
-        this.head.next = node
-    }
-
-    // 移除节点
-    removeNode(node) {
-        node.pre.next = node.next
-        node.next.pre = node.pre
-    }
-
-    // 移动到头部 - 刷新地位
-    moveToHead(node) {
-        this.removeNode(node)
-        this.addToHead(node)
-    }
-
-    // 移除尾部节点，同时返回被移除节点方便维护cache映射
-    removeTail() {
-        const node = this.tail.pre
-        this.removeNode(node)
-        return node
-    }
-
-    get(key) {
-        if (!(key in this.cache)) return -1
-
-        const node = this.cache[key]
-        this.moveToHead(node) // get 也要刷新地位
-        return node.value
-    }
-
-    put(key, value) {
-        if (key in this.cache) {
-            // 已存在，更新值并移到头部
-            const node = this.cache[key]
-            node.value = value
-            this.moveToHead(node)
-        } else { // 新节点
-            if (this.size >= this.capacity) {
-                // 移除最久未使用的（尾部）
-                const tailNode = this.removeTail()
-                delete this.cache[tailNode.key]
-                this.size--
-            }
-
-            const newNode = new DLLNode(key, value)
-            this.cache[key] = newNode
-            this.addToHead(newNode)
-            this.size++
         }
     }
 }
