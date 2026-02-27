@@ -200,3 +200,4 @@
 - [em 在是 font-size 相对父元素字体大小，非font-size 属性相对当前自身元素字体大小](https://github.com/ceilf6/Lab/commit/0d76ef2f8d3a3728d637ffe93512967933ca2553)
 - [现代 CSS3 flex / grid 快速实现布局](https://github.com/ceilf6/Lab/commit/29c88b7bdc586a188cbd2b1a32e504ed76a10d9f)
 - [transition / animation 配合 transform 实现翻转效果动画](https://github.com/ceilf6/Lab/commit/f509b08017963200729ecf6967116cf36236df3d)
+- [箭头函数特性](https://github.com/ceilf6/Lab/commit/da09debd21b20ddea999a9cc374db8b0a126264f)
