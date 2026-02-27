@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes rotateAnimationName {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg)
+            }
+        }
+
+        .rotate {
+            animation: rotateAnimationName 2s infinite
+        }
+    </style>
+</head>
+
+<body>
+    <img src="../../../../assetsForTest/ceilf6.png" alt="">
+    <button id="toggleBtn">自动循环旋转</button>
+    <script>
+        const img = document.querySelector('img')
+        const btn = document.querySelector('#toggleBtn')
+        function rotateImg() {
+            img.classList.toggle('rotate') // 切换样式
+            btn.textContent = img.classList.contains('rotate')
+                ? '停止动画'
+                : '自动循环旋转'
+        }
+        btn.addEventListener('click', rotateImg)
+    </script>
+</body>
+
+</html>

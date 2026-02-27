@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .rotate {
+            transform: rotate(360deg);
+        }
+
+        img {
+            transform: rotate(0deg);
+            transition: transform 0.5s ease;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="../../../../assetsForTest/ceilf6.png" alt="">
+    <button onclick="rotateImg()">旋转</button>
+    <script>
+        function rotateImg() {
+            const img = document.querySelector('img')
+            // img.style.transform = 'rotate(180deg)'
+            img.classList.toggle('rotate') // 切换样式
+        }
+    </script>
+</body>
+
+</html>
