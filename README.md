@@ -197,3 +197,4 @@
 - [V8 源码分析 ThisBinding this全局数据流向 四条绑定规则的底层字节码](https://github.com/ceilf6/Lab/commit/633867a28243d7f6dd8912d7c7f283d73c634eee)
 - [V8 源码分析 闭包 - 让变量的生命周期独立于调用栈 的底层实现细节](https://github.com/ceilf6/Lab/commit/145239aa9571618ec46f8693e486615aa61b73ee)
 - [V8 源码分析 垃圾回收GC 新老生代的分代处理( 内存页标志位 )，大多数对象出生在新生代 Minor GC，在存活超过一轮之后晋升为老生代 Major GC](https://github.com/ceilf6/Lab/commit/f587d8310896b380f6a5d1810087345dc14b7b71)
+- [em 在是 font-size 相对父元素字体大小，非font-size 属性相对当前自身元素字体大小](https://github.com/ceilf6/Lab/commit/0d76ef2f8d3a3728d637ffe93512967933ca2553)
