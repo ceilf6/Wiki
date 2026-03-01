@@ -203,3 +203,4 @@
 - [箭头函数特性](https://github.com/ceilf6/Lab/commit/da09debd21b20ddea999a9cc374db8b0a126264f)
 - [V8 源码分析 启动注册内置全局对象Function Function 的 constructor, prototype ...](https://github.com/ceilf6/Lab/commit/4d158024688aaf793b98ae4136445d96623bcb71)
 - [V8 源码分析 老生代Major GC-三色标记](https://github.com/ceilf6/Lab/commit/705449071d4b33f52d7f82c57cf90016fb1c5b5e)
+- [ESM 会在静态编译阶段就分析依赖，不要在条件循环代码块中进行导入导出](https://github.com/ceilf6/Lab/commit/9f9832160164d299e88deb43168a1303177f8ebd)
