@@ -10,3 +10,6 @@
 [submodule "NodeJS/Libuv-source"]
 	path = NodeJS/Libuv-source
 	url = https://github.com/ceilf6/libuv
+[submodule "Vue2/Vue2-source"]
+	path = Vue2/Vue2-source
+	url = https://github.com/ceilf6/vue
