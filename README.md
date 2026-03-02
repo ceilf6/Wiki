@@ -210,3 +210,4 @@
 - [Chromium 源码分析 事件循环 for( ; ; ) 并不会空转，而是根据是否有延时任务有两种休眠和唤醒方式](https://github.com/ceilf6/Lab/commit/d39823089b24a4cf3ee937672b25f508b7ff3104)
 
 
+- [Chromium 源码分析 浏览器决定携带cookie](https://github.com/ceilf6/Lab/commit/943abcd1735e16850054276d2f1ead0509cf19d5)
