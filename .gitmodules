@@ -16,3 +16,6 @@
 [submodule "Vue3/Vue3-source"]
 	path = Vue3/Vue3-source
 	url = https://github.com/ceilf6/core
+[submodule "React/ahooks"]
+	path = React/ahooks
+	url = https://github.com/ceilf6/hooks
