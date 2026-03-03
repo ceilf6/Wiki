@@ -1,40 +1,56 @@
 #!/bin/sh
 # 子模块 push 后，自动同步父仓库 Lab 的子模块指针并推送
+# 为子模块的每一个提交在父仓库中单独生成一条对应 commit（一步一步跟进）
 # 通过 core.hooksPath 配置加载，脚本本身受 Lab 仓库版本控制
 
 set -e
 
-# 获取子模块最新一条 commit 信息
-COMMIT_MSG=$(git log -1 --pretty=%B)
-
-# 父仓库根目录：子模块均位于 Lab/<dir>/<name>，往上两级即 Lab
+# 子模块根目录 & 父仓库根目录
+SUB_DIR=$(git rev-parse --show-toplevel)
 # 适用于所有两级深度的子模块（React/source、JS/engine-source 等）
-PARENT_DIR=$(cd "$(git rev-parse --show-toplevel)/../.." && pwd)
+PARENT_DIR=$(cd "$SUB_DIR/../.." && pwd)
 
-echo "[post-push] 同步父仓库 Lab 子模块指针..."
+# 子模块相对于父仓库的路径，例如 React/Ahooks-source
+SUB_REL=$(realpath --relative-to="$PARENT_DIR" "$SUB_DIR" 2>/dev/null \
+  || python3 -c "import os; print(os.path.relpath('$SUB_DIR','$PARENT_DIR'))")
+
+echo "[post-push] 同步父仓库 Lab 子模块指针（逐提交模式）..."
 
 cd "$PARENT_DIR" || exit 1
 
-# 先拉取远端最新，避免 non-fast-forward 推送失败（merge 保留历史）
-# --no-edit: 非交互式环境下禁止打开编辑器，自动使用默认 merge commit message
+# 先拉取远端最新，避免 non-fast-forward 推送失败
 git pull --no-rebase --no-edit
 
-# 暂存 Lab 中所有变更（包括子模块指针及其他未提交内容）
-git add -A
+# 父仓库当前记录的子模块指针（旧 SHA）
+OLD_SHA=$(git ls-tree HEAD "$SUB_REL" | awk '{print $3}')
+# 子模块当前 HEAD（新 SHA）
+NEW_SHA=$(git -C "$SUB_DIR" rev-parse HEAD)
 
-# 检查是否有变更需要提交
-if git diff --cached --quiet; then
+if [ "$OLD_SHA" = "$NEW_SHA" ]; then
   echo "[post-push] 父仓库无需更新（指针未变化）"
   exit 0
 fi
 
-git commit -m "$COMMIT_MSG"
+# 按时间顺序列出 OLD_SHA..NEW_SHA 之间的每一个提交（从旧到新）
+COMMITS=$(git -C "$SUB_DIR" log --reverse --pretty="%H" "${OLD_SHA}..${NEW_SHA}")
 
-# 推送，失败则 pull merge 后重试（应对 CI 自动提交等竞态场景），最多 3 次
+COUNT=0
+for SHA in $COMMITS; do
+  MSG=$(git -C "$SUB_DIR" log -1 --pretty=%B "$SHA")
+  # 将父仓库 index 中的子模块指针拨到该 SHA，无需实际 checkout 子模块
+  git update-index --cacheinfo "160000,${SHA},${SUB_REL}"
+  git commit -m "$MSG"
+  COUNT=$((COUNT + 1))
+  echo "[post-push] [$COUNT] 已提交父仓库：${SHA} - $(echo "$MSG" | head -1)"
+done
+
+echo "[post-push] 共创建 $COUNT 条父仓库提交，开始推送..."
+
+# 推送，失败则 pull merge 后重试（应对竞态场景），最多 3 次
 PUSH_RETRY=3
 while [ $PUSH_RETRY -gt 0 ]; do
   if git push; then
-    echo "[post-push] 父仓库 Lab 已同步推送，commit: $COMMIT_MSG"
+    echo "[post-push] 父仓库 Lab 已同步推送（$COUNT 条提交）"
     break
   fi
   PUSH_RETRY=$((PUSH_RETRY - 1))
