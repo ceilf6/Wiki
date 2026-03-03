@@ -75,15 +75,16 @@ export default function useFetch(url, options) {
     // 并且假如作为其他副作用钩子函数的依赖时，在内部调用后 reFetch 的引用会变化，导致无限递归
 
     // 2. 将上面副作用包装成一个函数方法，在reFetch中调用
-    const run = useCallback(async (params) => { })
+    const run = useCallback(async (params) => { }, []) // 别忘记 useCallback 确保 run 稳定，后续才能作为副作用钩子的依赖
     const reFetch2 = useCallback(() => {
         return run(paramsRef.current)
-    })
+    }, [run])
     useEffect(() => {
         const controller = new AbortController()
         run(defaultParams)
         return controller.abort()
-    }, [url, ...deps])
+    }, [url, ...deps, run, defaultParams])
+    // ...deps 会导致 eslint 误报无法静态分析依赖, ahooks 的做法是用 useRef 保存 deps，配合 `// eslint-disable-next-line` 注释直接禁用该行检查
 
     return { data, loading, error, reFetch }
 }
