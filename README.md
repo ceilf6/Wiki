@@ -217,3 +217,4 @@
 
 - [Ahooks 源码分析 useRequest 通过 计数器取消异步，没有用 AbortController ，因为 service 可以是任意的异步函数](https://github.com/ceilf6/hooks/commit/dc7ade661005f2a7353f21e72a79f095774206f1)
 
+- [Ahooks 源码分析 useMemoizedFn: useCallback 依赖变化时引用会变，使用时需要注意依赖; 而 useMemoizedFn 引用永远稳定、无需设置依赖，且始终调用最新函数](https://github.com/ceilf6/hooks/commit/f077ec8b9ff57cf0e5466875536116c4d75d747a)
