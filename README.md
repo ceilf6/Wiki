@@ -220,3 +220,4 @@
 - [Ahooks 源码分析 useMemoizedFn: useCallback 依赖变化时引用会变，使用时需要注意依赖; 而 useMemoizedFn 引用永远稳定、无需设置依赖，且始终调用最新函数](https://github.com/ceilf6/hooks/commit/f077ec8b9ff57cf0e5466875536116c4d75d747a)
 - [用记忆化解决循环引用问题：如果某个对象已经拷贝过了，就直接返回之前的拷贝](https://github.com/ceilf6/Lab/commit/e58609ba381913dee323fed2a41d073a1566cdba)
 - [pinia 的两种风格设置仓库](https://github.com/ceilf6/Lab/commit/0313340a0b4eacb18af99617c5d50f5c896a8e27)
+- [pinia🍍 源码分析 defineStore, storeToRefs setup风格效率更高](https://github.com/ceilf6/Lab/commit/b441616c31502eaf93decc066081024598dc542d)
