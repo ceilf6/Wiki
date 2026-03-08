@@ -222,3 +222,4 @@
 - [pinia 的两种风格设置仓库](https://github.com/ceilf6/Lab/commit/0313340a0b4eacb18af99617c5d50f5c896a8e27)
 - [pinia🍍 源码分析 defineStore, storeToRefs setup风格效率更高](https://github.com/ceilf6/Lab/commit/b441616c31502eaf93decc066081024598dc542d)
 - [子模块管理 在源码分析达成当前阶段好奇后，可以先通过 git.ignoredRepositories 暂时收起，以免太多仓库展开导致的混乱](https://github.com/ceilf6/Lab/commit/a7d3918d451beb34345e423cfbafa5e76b4ab053)
+- [React 源码思想实现 createFiber 创造 vnode 的运行时实例对象 FiberNode](https://github.com/ceilf6/Lab/commit/cb5bb06249ed6a7ee869e6f98d70795f5e800690)
