@@ -27,7 +27,7 @@ const store = useCounterStore();
 
 // 解构数据
 const { num, doubleNum } = storeToRefs(store);
-// 如果不用 storeToRefs 仓库中的数据 breaks reactivity 不是响应式的
+// 如果不用 storeToRefs 仓库中的数据 "breaks reactivity" 不是响应式的
 
 // 解构方法
 const { increment, decrement, asyncIncrement, asyncDecrement } = store;

@@ -17,5 +17,8 @@
   "git.autofetch": false,
   "git.rebaseWhenSync": false,
   "javascript.validate.enable": false,
-  "flow.enabled": true
+  "flow.enabled": true,
+  "git.ignoredRepositories": [
+    "Vue3/Pinia-source"
+  ]
 }
