@@ -221,3 +221,4 @@
 - [用记忆化解决循环引用问题：如果某个对象已经拷贝过了，就直接返回之前的拷贝](https://github.com/ceilf6/Lab/commit/e58609ba381913dee323fed2a41d073a1566cdba)
 - [pinia 的两种风格设置仓库](https://github.com/ceilf6/Lab/commit/0313340a0b4eacb18af99617c5d50f5c896a8e27)
 - [pinia🍍 源码分析 defineStore, storeToRefs setup风格效率更高](https://github.com/ceilf6/Lab/commit/b441616c31502eaf93decc066081024598dc542d)
+- [子模块管理 在源码分析达成当前阶段好奇后，可以先通过 git.ignoredRepositories 暂时收起，以免太多仓库展开导致的混乱](https://github.com/ceilf6/Lab/commit/a7d3918d451beb34345e423cfbafa5e76b4ab053)
