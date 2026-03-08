@@ -1,16 +1,19 @@
 <template>
   <!-- <Page></Page> -->
-  <RenderTriggered />
+  <!-- <RenderTriggered /> -->
+  <PiniaTest />
 </template>
 
 <script>
-import RenderTriggered from "./test/LifeCycle/RenderTriggered.vue";
+import PiniaTest from "./test/pinia-test/index.vue";
+// import RenderTriggered from "./test/LifeCycle/RenderTriggered.vue";
 
 // import Page from "./test/Page.vue";
 // import RenderTracked from "./test/LifeCycle/RenderTracked.vue";
 export default {
   components: {
-    RenderTriggered,
+    // RenderTriggered,
+    PiniaTest,
   },
 };
 </script>

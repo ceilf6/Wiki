@@ -2,7 +2,7 @@
 // Vue2/sandboxs/src/store/loginAdmin.js
 
 import { reactive, readonly, toRefs } from 'vue'
-import * as userAPI from '@/api/user.js'
+import * as userAPI from '../api/user.js'
 
 const userState = reactive({ // 全局的响应式数据
     user: null,
