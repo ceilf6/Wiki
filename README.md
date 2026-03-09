@@ -226,3 +226,4 @@
 - [React 源码思想实现 WorkLoop 深度优先](https://github.com/ceilf6/Lab/commit/be90f09f5f67da2d9e225e0374033ca1b1679b0e)
 - [React 源码思想实现 遍历更新 DOM 节点上的属性](https://github.com/ceilf6/Lab/commit/8ec0954f1b83a20a1483b601ce365da3afdd5694)
 - [React 源码思想实现 beginWork 中，根据 FiberNode 对象的 tag 值，调用不同的方法进行处理](https://github.com/ceilf6/Lab/commit/67f35407e64f4aa9ca1b638e03ebc21ff51daf8e)
+- [React 源码思想实现 首次渲染子节点处理-diff、Fiber链表串联](https://github.com/ceilf6/Lab/commit/8f39b488e2a4e8aff997d39b9c393c4c442bc1b2)
