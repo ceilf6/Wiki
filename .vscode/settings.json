@@ -20,5 +20,9 @@
   "flow.enabled": true,
   "git.ignoredRepositories": [
     "Vue3/Pinia-source"
-  ]
+  ],
+  "code-runner.executorMap": {
+    "typescript": "tsx"
+  },
+  "code-runner.runInTerminal": true
 }
