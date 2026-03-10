@@ -1,1 +1,2 @@
 import './testClg'
+import './types'

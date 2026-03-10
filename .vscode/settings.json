@@ -24,5 +24,8 @@
   "code-runner.executorMap": {
     "typescript": "tsx"
   },
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
   "code-runner.runInTerminal": true
 }
