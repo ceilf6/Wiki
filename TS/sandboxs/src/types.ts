@@ -130,3 +130,99 @@ function filterNumCallback<T1, callbackT extends T1>(args: T1[], callback: (item
 filterNumCallback([1, 2, "3", 4, 5], (item) => console.log(item),
     (item): item is number => typeof item === "number"
 )
+
+
+// === 7. 对象字面量类型
+let Obj: {
+    id: number,
+    name: string,
+    sex?: 'male' | 'female'
+}
+Obj = {
+    id: 1,
+    name: 'ceilf6'
+}
+Obj.sex = 'male'
+
+const Objs: { id: number, name: string }[] = [{ id: 2, name: 'ceilf7' }]
+
+
+// === 8. 自定义类型
+// a. 类型别名：任何有效的类型
+type pos = {
+    x: number,
+    y: number
+} | undefined
+
+const posIns: pos = {
+    x: 1,
+    y: 2
+}
+
+// b. 接口：面向对象的概念，一般用于定义对象类型
+interface pos2 {
+    x: number,
+    y: number,
+    callback(str: string): void,
+    callback2?: (num: number) => void
+}
+
+const pos2Ins: pos2 = {
+    x: 1,
+    y: 2,
+    callback(str) {
+        console.log(str + this.x + this.y)
+    }
+}
+function clg(pos: pos2) {
+    console.log(pos.x)
+}
+pos2Ins.callback('ceilf6')
+
+
+// === 9. 交叉类型
+type a1 = {
+    id: number,
+    name: string
+}
+type a2 = {
+    id: number,
+    age: number
+}
+type a = a1 & a2
+
+const aIns: a = {
+    id: 1,
+    name: 'ceilf6',
+    age: 20
+}
+type aCom = a1 | a2
+const aComIns: aCom = {
+    id: 1,
+    name: 'ceilf6',
+    age: 20
+}
+
+type t = number & string // type t = never
+
+
+// === 10. 类型断言
+function split(val: any) {
+    console.log((val as string).split(' '))
+}
+// 非空断言
+let maybeVal: string | undefined = undefined
+maybeVal = '1 2'
+console.log(maybeVal!.split(' '))
+
+// const inputDOM = document.querySelector('input') // HTMLInputElement | null
+// “inputDOM”可能为 “null”。
+// inputDOM!.addEventListener('click', e => { console.log((e.target as HTMLInputElement).value) })
+
+
+// === 11. 可选链
+const objIns: {
+    id?: number
+} = {
+}
+console.log(objIns.id?.toFixed(2)) // undefined
