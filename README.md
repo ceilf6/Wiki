@@ -230,3 +230,4 @@
 - [封装私有属性的三种实现方式 通过函数+闭包模拟实现](https://github.com/ceilf6/Lab/commit/c8db932f09dcf4d4691848f0d60792f0d01f3f4f)
 - [单调栈记录引用实现 tab parser: md; Python AST; yaml; CLI tree](https://github.com/ceilf6/Lab/commit/99c78093416570a4184ecc3b2799164a28ffbb28)
 - [TS常用类型](https://github.com/ceilf6/Lab/commit/190331a647bc789421769234df99e88aeee27ca1)
+- [TS常用类型](https://github.com/ceilf6/Lab/commit/9edb26be4f29a4858a27f76a97e874b0ce0d60f7)
