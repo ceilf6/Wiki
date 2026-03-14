@@ -1,3 +1,19 @@
+const obj = {
+    a1: () => {
+        console.log()
+    },
+    sunObj: {
+        a2: 2
+    },
+    a3: new Map()
+}
+
+export function deepCopy2(from) {
+    return JSON.parse(JSON.stringify(from))
+}
+console.log(deepCopy2(obj))
+console.log(deepCopy(obj))
+
 // 用记忆化解决循环引用问题：如果某个对象已经拷贝过了，就直接返回之前的拷贝
 // 映射: 原对象 -> 拷贝对象
 function deepCopy(from, memo = new WeakMap()) {
