@@ -238,3 +238,6 @@
 - [观察者模式-TS](https://github.com/ceilf6/Lab/commit/83718f7de6197d0663ec7a19892ad9165081893a)
 - [文档开发 skil : 提供模版、脚本支持](https://github.com/ceilf6/Lab/commit/aa312dbfdf97735385cbda7eda84985e1562cd7f)
 - [Transformer 论文 注意力机制](https://arxiv.org/html/1706.03762)
+- [阶段7 git, gh 仓库管理 ( resolve #3 )](https://github.com/ceilf6/Lab/commit/12b685dbd459ecee221cd3c7f74a34a4596f818d)
+- [质量检测子Agent](https://github.com/ceilf6/Lab/commit/db503c89b733f1dcd684736c31998b38f0ea1e22)
+- [a2a schema](https://github.com/ceilf6/Lab/commit/b95c100f538d43b4761bb6dbb3a26ba22be6ae1d)
