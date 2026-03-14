@@ -241,3 +241,4 @@
 - [阶段7 git, gh 仓库管理 ( resolve #3 )](https://github.com/ceilf6/Lab/commit/12b685dbd459ecee221cd3c7f74a34a4596f818d)
 - [质量检测子Agent](https://github.com/ceilf6/Lab/commit/db503c89b733f1dcd684736c31998b38f0ea1e22)
 - [a2a schema](https://github.com/ceilf6/Lab/commit/b95c100f538d43b4761bb6dbb3a26ba22be6ae1d)
+- [多智能体共享事实 - 类似于React状态上移，主Agent持有事实来源，在调用SubAgent的时候下发事实快照，子代理在a2a返回响应时返回更新包，主Agent进行合并](https://github.com/ceilf6/Lab/commit/5ccfb7468949e43a4b0567c73744019e974240c2)
