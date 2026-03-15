@@ -25,7 +25,7 @@ function diffList(oldList, newList, key) {
         if (oldItem.id === newItem.id) {
             const fields = []
             // 因为我看题目没有说新增字段，所以就直接取旧对象的属性进行比较
-            const keys = Object.keys(oldItem)
+            // const keys = Object.keys(oldItem)
             const keys = [...new Set([...Object.keys(oldItem), ...Object.keys(newItem)])]
             // 如果需要的话可以通过 ...new Set 取并集
             for (const key of keys) {
