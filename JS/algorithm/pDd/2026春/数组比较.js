@@ -72,6 +72,68 @@ function diffList(oldList, newList, key) {
 // 并且题目说层数只需要一层，所以也不用写边界条件去递归DFS
 
 
+// Map解法
+function diffList_2(oldList, newList, key = 'id') {
+    const ans = {
+        added: [],
+        removed: [],
+        changed: []
+    }
+
+    const oldMap = new Map()
+
+    // 1. 旧数组建表
+    for (const item of oldList) {
+        oldMap.set(item[key], item)
+    }
+
+    // 2. 遍历新数组，找新增和修改
+    for (const newItem of newList) {
+        const id = newItem[key]
+        const oldItem = oldMap.get(id)
+
+        // 新增
+        if (!oldMap.has(id)) {
+            ans.added.push(newItem)
+            continue
+        }
+
+        // 比较字段
+        const fields = []
+        const keys = [...new Set([
+            ...Object.keys(oldItem),
+            ...Object.keys(newItem)
+        ])]
+
+        for (const k of keys) {
+            if (oldItem[k] !== newItem[k]) {
+                fields.push({
+                    field: k,
+                    oldVal: oldItem[k],
+                    newVal: newItem[k]
+                })
+            }
+        }
+
+        if (fields.length > 0) {
+            ans.changed.push({
+                [key]: id,
+                fields
+            })
+        }
+
+        // 处理完就删掉，剩下的就是 removed
+        oldMap.delete(id)
+    }
+
+    // 3. oldMap 里剩下的是删除项
+    for (const item of oldMap.values()) {
+        ans.removed.push(item)
+    }
+
+    return ans
+}
+
 const oldList = [
     { id: 1, name: 'ceilf6', price: 100 },
     { id: 3, name: 'ceilf7', price: 100 },
@@ -85,3 +147,5 @@ const newList = [
     { id: 6, name: 'ceilf10', price: 200 }
 ]
 console.log(diffList(oldList, newList, 'id'))
+console.log('===')
+console.log(diffList_2(oldList, newList, 'id'))
