@@ -244,3 +244,4 @@
 - [多智能体共享事实 - 类似于React状态上移，主Agent持有事实来源，在调用SubAgent的时候下发事实快照，子代理在a2a返回响应时返回更新包，主Agent进行合并](https://github.com/ceilf6/Lab/commit/5ccfb7468949e43a4b0567c73744019e974240c2)
 - [顺序架构 - 手写 DAG 实现调度](https://github.com/ceilf6/Lab/commit/ca3239a4c5ef199e26589ccba26f1cbeaa615b82)
 - [风险隔离+平滑迁移 添加LangGraph架构 控制顺序](https://github.com/ceilf6/Lab/commit/fd3f5dc25dd71ea3246bd66d8502cea954f87fe2)
+- [事件总线实现上的一些细节问题](https://github.com/ceilf6/Lab/commit/105dffe3a786bd849465e91c583261844f95f17e)
