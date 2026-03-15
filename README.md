@@ -247,3 +247,4 @@
 - [事件总线实现上的一些细节问题](https://github.com/ceilf6/Lab/commit/105dffe3a786bd849465e91c583261844f95f17e)
 - [设计问题 数组一般维护都是同一类型数据，标志位最好专门开个对象属性存储](https://github.com/ceilf6/Lab/commit/5ed0dc62144906b66e5d426a9e05c38b072468c9)
 - [新旧数组对比diff算法实现上的一些细节问题](https://github.com/ceilf6/Lab/commit/6f55cf34468eea0bd475bd9739ce4f1212aa10c0)
+- [缓存、超时...的请求包装函数中的一些细节问题](https://github.com/ceilf6/Lab/commit/accde32068d0aa8c35a80a6d8d167c11060ad7a9)
