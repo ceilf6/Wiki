@@ -250,3 +250,4 @@
 - [缓存、超时...的请求包装函数中的一些细节问题](https://github.com/ceilf6/Lab/commit/accde32068d0aa8c35a80a6d8d167c11060ad7a9)
 - [请求包装函数 - 大道至简](https://github.com/ceilf6/Lab/commit/aea79958974385e1a4738868781b09bbb8e0581b)
 - [将规划者的可复用能力全部技能化，planner 通过技能注册表选择执行skill，不再直接硬编码 ( resolve #2 )](https://github.com/ceilf6/Lab/commit/16b11dae9d6dfd84fda53dbd2d688d49fd859d3d)
+- [openclaw 网关-统一鉴权 应用层协议 http 和 WebSocket 都只是薄封装，具体区别只是提取凭证方式不同](https://github.com/ceilf6/Lab/commit/6e10c4117404517427efc95d953d5d489e26e9ec)
