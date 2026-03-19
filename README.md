@@ -256,3 +256,6 @@
 - [如果 README-only 可能会过滤有用知识，升级为基于整个Lab(除子模块外)的 hybrid search](https://github.com/ceilf6/Lab/commit/71d93c628089cd33e5b0f6b65a3ed2f871f21bb2)
 - [嵌入模型服务来源默认走LLM的配置](https://github.com/ceilf6/Lab/commit/99390c8ff23c4932dc2516ab8d6631695b6c45d5)
 - [嵌入模型端口需要在大模型的"v1"后加上"/embeddings"](https://github.com/ceilf6/Lab/commit/cabfeea691baee2616c017296a3b63b4da90a4c9)
+- [两次BFS/DFS求树的直径](https://github.com/ceilf6/Lab/commit/cea2c619aafcea474046df5e3c735ab9d85c70a5)
+
+- [JS手写 堆](https://github.com/ceilf6/Lab/blob/main/JS/algorithm/手写堆.js)
