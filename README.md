@@ -259,3 +259,4 @@
 - [两次BFS/DFS求树的直径](https://github.com/ceilf6/Lab/commit/cea2c619aafcea474046df5e3c735ab9d85c70a5)
 
 - [JS手写 堆](https://github.com/ceilf6/Lab/blob/main/JS/algorithm/手写堆.js)
+- [简单工厂模式统一产品的创建接口](https://github.com/ceilf6/Lab/commit/a3f11ba9357aefdfe8fdfa75ce1c5f732d56ceec)
