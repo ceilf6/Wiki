@@ -261,3 +261,4 @@
 - [JS手写 堆](https://github.com/ceilf6/Lab/blob/main/JS/algorithm/手写堆.js)
 - [简单工厂模式统一产品的创建接口](https://github.com/ceilf6/Lab/commit/a3f11ba9357aefdfe8fdfa75ce1c5f732d56ceec)
 - [简单工厂不符合开闭原则，通过工厂方法实现产品和工厂一一对应进行解决 简单工厂类职责过重，每次新增产品都需要更新工厂类，那么需要在工厂再抽象一层 IFactories](https://github.com/ceilf6/Lab/commit/ca385f4989bab8799b98761055fccbdd960f9f76)
+- [抽象工厂统一一系列产品的工厂](https://github.com/ceilf6/Lab/commit/9476739f3576a1608ee9486968cff97dea8c2d5c)
