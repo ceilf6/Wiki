@@ -265,3 +265,4 @@
 - [装饰器模式实现链式拓展功能，本质就是**组合**](https://github.com/ceilf6/Lab/commit/161591ec90232a4c0a1fd18b1d6aef9cc5e65694)
 - [装饰器模式TS写法](https://github.com/ceilf6/Lab/commit/adfcca92a1176e5f71205a321af861bba603ca94)
 - [适配器模式胶水层实现接口转换](https://github.com/ceilf6/Lab/commit/6d911bad537fef5e0dfba6328f4e6f4440e08ca2)
+- [通过代理模式实现中间层过滤等操作](https://github.com/ceilf6/Lab/commit/03e47cd56b172bcc4eb0d2b1619e258f5a11125f)
