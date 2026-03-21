@@ -7,3 +7,8 @@ proxyServer.operation()
 
 const proxyServerWithoutPermission = new Proxy(server, 0)
 proxyServerWithoutPermission.operation()
+
+
+import { createProxyServer } from "./ProxyByAPI";
+const proxyByAPIServerWithoutPermission = new Proxy(server, 0)
+proxyByAPIServerWithoutPermission.operation()
