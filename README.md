@@ -266,3 +266,4 @@
 - [装饰器模式TS写法](https://github.com/ceilf6/Lab/commit/adfcca92a1176e5f71205a321af861bba603ca94)
 - [适配器模式胶水层实现接口转换](https://github.com/ceilf6/Lab/commit/6d911bad537fef5e0dfba6328f4e6f4440e08ca2)
 - [通过代理模式实现中间层过滤等操作](https://github.com/ceilf6/Lab/commit/03e47cd56b172bcc4eb0d2b1619e258f5a11125f)
+- [模版模式抽象基类规定框架后子类特异化步骤](https://github.com/ceilf6/Lab/commit/61e72525b420ba782a1ba1869b6b4aa4de1f1502)
