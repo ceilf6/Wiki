@@ -277,3 +277,4 @@
 - [向量数据库优化 - 通过大模型以前端领域专业翻译用户需求，以更好进行向量检索](https://github.com/ceilf6/Lab/commit/e1fae5de2ffd11c8d6c402d13e1d47635cff5315)
 - [向量数据库优化 - 优化分块器进行特殊字符分块（未来token便宜之后可以直接让LLM分块） 由于知识库内容过多，语义分块相似度计算代价过高](https://github.com/ceilf6/Lab/commit/7f1eb04cbb8a8bb215b547afb4885ab276d67d6a)
 - [向量数据库优化 - 通过重排序器中对双向编码器得到的初步结果进行交叉编码，得到更高精准度的目标文档](https://github.com/ceilf6/Lab/commit/c906e694b5d60125ea8961ca93bca898a20a2628)
+- [基于 ai-sdk 打通 FrontAgent CLI 暴露支持 LLM 随机生成相关 API 方便使用者进行采样策略控制](https://github.com/ceilf6/Lab/commit/92d1fcdc953dbfcf1c343175fbe306317395661f)
