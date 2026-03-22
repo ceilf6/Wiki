@@ -24,3 +24,15 @@ env.js
 # 嵌套 git 仓库，不作为子模块追踪
 JS/preJS/1/
 React/sandboxs/React/source/
+
+# openclaw
+/AGENTS.md
+/TOOLS.md
+/USER.md
+/HEARTBEAT.md
+/BOOTSTRAP.md
+/SOUL.md
+/IDENTITY.md
+/MEMORY.md
+/memory.md
+/.openclaw/
