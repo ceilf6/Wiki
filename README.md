@@ -271,3 +271,4 @@
 - [通过策略模式实现国际化支持](https://github.com/ceilf6/Lab/commit/b29db9d3d168eefd4eea0dee2fe168045159e0f7)
 - [通过 ES6 Proxy API 实现代理模式，减少一层代理类](https://github.com/ceilf6/Lab/commit/aac333150a0d3b9e7d989df19cd086e8093455f9)
 - [通过 generator API 实现迭代器模式](https://github.com/ceilf6/Lab/commit/4474fedcbad86227a6997763274c568d354fe5c0)
+- [飞书开发者平台配置机器人后对接龙虾跑通示例](https://github.com/ceilf6/Lab/commit/1f4e69ede0b8bd82dde7e1789231954b165819a6)
