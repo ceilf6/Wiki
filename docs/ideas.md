@@ -1,0 +1,3 @@
+- 用户能随时框选一段文字后加入claw的配置md文件中，实现随时任何平台添加智能体记忆、规则等等的能力
+    - [需求分析](https://applink.feishu.cn/client/message/link/open?token=Amm%2FfFC0gUzCab%2B3n3dATLk%3D)
+    - 如果未来操作系统底层有个Agent，那么能力就能相应拓展、也不需要多方平台API适配
