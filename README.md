@@ -289,3 +289,4 @@
 - [NodeJS API 统一资源定位符URL相关](https://github.com/ceilf6/Lab/commit/3dd9fb70e6bc380c5152eacb53fc7346f64fb56b)
 - [NodeJS API 工具util相关](https://github.com/ceilf6/Lab/commit/dc4191b3c4d17ba28faa683700139505308d101e)
 - [NodeJS API 文件系统fs相关 readFile读取文件](https://github.com/ceilf6/Lab/commit/51835b4f7045a0811b1983be6f8cfe04bf341acd)
+- [NodeJS API writeFile写入文件](https://github.com/ceilf6/Lab/commit/6fe5c8adbb68ea1326cae0c4eea96b51587fba2b)
