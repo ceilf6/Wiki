@@ -283,3 +283,4 @@
 - [Promise.all 注意串行阻塞问题](https://github.com/ceilf6/Lab/commit/df97f51a3b9aaeed4d08aeb1c42e71f29a505e6a)
 - [收集参数 递归过程中直接将参数传递，在外面维护会导致参数丢失](https://github.com/ceilf6/Lab/commit/7b70c5604dcba063d73602733775ce5e36230fa4)
 - [NodeJS源码学习子模块 排除了deps/目录防止臃肿 后续学习具体拉下例如Libuv-source](https://github.com/ceilf6/Lab/commit/ff32ca3996732bcdc9784dd6193660a8fa914138)
+- [CMJ require 源码学习: 1. 先缓存、后执行 => 处理循环依赖 2. 路径解析、查找文件 3. 加载文件 4. 函数包裹 5. modules对象](https://github.com/ceilf6/Lab/commit/f3b40da86b79f7bbe3b554b6bd2e0294f0ba67af)
