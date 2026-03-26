@@ -28,7 +28,9 @@ module.exports = {
 }
 // 最后导出的是 { test2: 'ceilf7' }
 
-import ESMObj from './testESMinCMJ.mjs' // SyntaxError: Cannot use import statement outside a module
+// import ESMObj from './testESMinCMJ.mjs' // SyntaxError: Cannot use import statement outside a module
+import('./testESMinCMJ.mjs').then(res => console.log(res))
+// [Module: null prototype] { default: { test: 'ceilf6' } }
 
 console.log(require('./testESMinCMJ.mjs'))
 /*
