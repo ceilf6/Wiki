@@ -1,7 +1,7 @@
 const jsonObj = require("./testJSON")
 console.log(jsonObj)
 
-require("./")
+require("./mainDec")
 
 console.log(module)
 /**
@@ -27,3 +27,13 @@ module.exports = {
     test2: 'ceilf7'
 }
 // 最后导出的是 { test2: 'ceilf7' }
+
+import ESMObj from './testESMinCMJ.mjs' // SyntaxError: Cannot use import statement outside a module
+
+console.log(require('./testESMinCMJ.mjs'))
+/*
+[Module: null prototype] {
+  __esModule: true,
+  default: { test: 'ceilf6' }
+}
+ */
