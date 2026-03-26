@@ -35,3 +35,8 @@
 [submodule "AI/3-Application/Openclaw-source"]
 	path = AI/3-Application/Openclaw-source
 	url = https://github.com/ceilf6/openclaw
+[submodule "NodeJS/Node-source"]
+	path = NodeJS/Node-source
+	url = https://github.com/ceilf6/node
+	branch = main
+	shallow = true
