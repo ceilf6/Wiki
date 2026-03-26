@@ -286,3 +286,4 @@
 - [CMJ require 源码学习: 1. 先缓存、后执行 => 处理循环依赖 2. 路径解析、查找文件 3. 加载文件 4. 函数包裹 5. modules对象](https://github.com/ceilf6/Lab/commit/f3b40da86b79f7bbe3b554b6bd2e0294f0ba67af)
 - [NodeJS API 操作系统OS相关](https://github.com/ceilf6/Lab/commit/db30d97cb4fdfd78362c7b9bafab84bf899fa143)
 - [NodeJS API 文件路径path相关](https://github.com/ceilf6/Lab/commit/b7e8f514a36f0f4be2c30044ed5bfc402eafcd05)
+- [NodeJS API 统一资源定位符URL相关](https://github.com/ceilf6/Lab/commit/3dd9fb70e6bc380c5152eacb53fc7346f64fb56b)
