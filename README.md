@@ -282,3 +282,4 @@
 - [Agent Skill 模式 实现可分发、可复用、面向具体库的 skill 包装层](https://github.com/ceilf6/Lab/commit/cffde000e7dc4edb37b49bb1ea479f6b485af732)
 - [Promise.all 注意串行阻塞问题](https://github.com/ceilf6/Lab/commit/df97f51a3b9aaeed4d08aeb1c42e71f29a505e6a)
 - [收集参数 递归过程中直接将参数传递，在外面维护会导致参数丢失](https://github.com/ceilf6/Lab/commit/7b70c5604dcba063d73602733775ce5e36230fa4)
+- [NodeJS源码学习子模块 排除了deps/目录防止臃肿 后续学习具体拉下例如Libuv-source](https://github.com/ceilf6/Lab/commit/ff32ca3996732bcdc9784dd6193660a8fa914138)
