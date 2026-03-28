@@ -295,3 +295,4 @@
 - [NodeJS API 文件不存在相关处理 不推荐原先的exists API先判断再处理，而是推荐用 stat 等API先操作再检查抓取错误](https://github.com/ceilf6/Lab/commit/288efc632736137910fbb38f33c3c8bd23e399da)
 - [NodeJS 递归读取文件信息 静态工厂处理构造函数无法异步问题 用静态 Map 做全局缓存 通过缓存Promises防止缓存击穿/重复缓存](https://github.com/ceilf6/Lab/commit/2a2570c9d392e552bd480e5d989b9c4d324b9cb3)
 - [注意和关键词区分 - MyFile](https://github.com/ceilf6/Lab/commit/2e31e9c13c8e999270a71a2dd09162df2180b28e)
+- [NodeJS 可读文件流](https://github.com/ceilf6/Lab/commit/d15d3f5e6c245e7f946e28c7374d138dde773ce6)
