@@ -1,7 +1,7 @@
 const fs = require("fs")
 const path = require("path")
 
-const testPath = path.resolve(__dirname, "./testFiles/2.txt")
+const testPath = path.resolve(__dirname, "./testFiles/from.txt")
 
 // 继承自 Writeable
 const writeStreamObj = fs.createWriteStream(testPath, {
@@ -26,13 +26,14 @@ console.log(res) // false 在utf-8中 中文占三个字节导致通道highWater
 
 
 let cur = 0
+const maxSize = 1024 * 1024 // 1M
 function tryWrite() {
     let flag = true
-    while (cur < 1024 && flag) {
+    while (cur < maxSize && flag) {
         flag = writeStreamObj.write("a")
         cur++
     }
-    if (cur === 1024) {
+    if (cur === maxSize) {
         console.log("结束写入")
         console.log("干涸次数", testDrainCnt)
     }
