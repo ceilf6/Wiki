@@ -297,3 +297,4 @@
 - [注意和关键词区分 - MyFile](https://github.com/ceilf6/Lab/commit/2e31e9c13c8e999270a71a2dd09162df2180b28e)
 - [NodeJS 可读文件流](https://github.com/ceilf6/Lab/commit/d15d3f5e6c245e7f946e28c7374d138dde773ce6)
 - [NodeJS 可写文件流 背压问题](https://github.com/ceilf6/Lab/commit/2b16adc651371e52f36fc4baf86b75f9d107ba14)
+- [实现文件复制 read write < copyFile < stream pipe < stream drain-resume](https://github.com/ceilf6/Lab/commit/e456acc8f23ab07fec0f89631c8b993eaf281a7c)
