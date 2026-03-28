@@ -291,3 +291,4 @@
 - [NodeJS API 文件系统fs相关 readFile读取文件](https://github.com/ceilf6/Lab/commit/51835b4f7045a0811b1983be6f8cfe04bf341acd)
 - [NodeJS API writeFile写入文件](https://github.com/ceilf6/Lab/commit/6fe5c8adbb68ea1326cae0c4eea96b51587fba2b)
 - [NodeJS API stat读物文件状态信息 isDirectory/mode判断是普通文件还是目录文件](https://github.com/ceilf6/Lab/commit/cdb3a21a87f914e8d64d1e14b0e11449058d8aed)
+- [NodeJS API readdir读取目录状态 mkdir创建目录](https://github.com/ceilf6/Lab/commit/f61720e1169b6fd5bbdb530d841fbab88f6fb008)
