@@ -298,3 +298,4 @@
 - [NodeJS 可读文件流](https://github.com/ceilf6/Lab/commit/d15d3f5e6c245e7f946e28c7374d138dde773ce6)
 - [NodeJS 可写文件流 背压问题](https://github.com/ceilf6/Lab/commit/2b16adc651371e52f36fc4baf86b75f9d107ba14)
 - [实现文件复制 read write < copyFile < stream pipe < stream drain-resume](https://github.com/ceilf6/Lab/commit/e456acc8f23ab07fec0f89631c8b993eaf281a7c)
+- [NodeJS net模块 通过模拟解析响应配合Content-Length判断通信是否结束](https://github.com/ceilf6/Lab/commit/1ffeba2bc1b14c6b81a127c11ff8fd4659a27754)
