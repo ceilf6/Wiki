@@ -1,9 +1,11 @@
 // 静态资源服务器测试
 
 const http = require("http")
-const url = require("url")
+// const url = require("url")
 const path = require("path")
 const fs = require("fs")
+
+const publicRoot = path.resolve(__dirname, "public")
 
 const mimeTypes = {
     ".css": "text/css; charset=utf-8",
@@ -25,47 +27,55 @@ function getMimeType(filePath) {
 /**
  * 目标文件信息
  */
-function url2path(urlObj) {
-    // todo: resolve 可能会导致穿透 public 目录
-    const urlPath = path.resolve(
-        __dirname,
-        "public",
-        urlObj.pathname.slice(1,) // 开头 / 去除
-    )
-    return urlPath
+function req2path(req) {
+    // 无脑 resolve 可能会导致穿透 public 目录
+    const urlObj = new URL(req.url, `http://${req.headers.host ?? "localhost"}`)
+    const pathname = decodeURIComponent(urlObj.pathname)
+    const safePath = path.resolve(publicRoot, `.${pathname}`)
+
+    // 做一层 startsWith 校验防止穿透
+    if (safePath !== publicRoot && !safePath.startsWith(`${publicRoot}${path.sep}`)) {
+        const err = new Error("Forbidden path")
+        err.statusCode = 403 // 403无权限
+        throw err
+    }
+
+    return safePath
 }
 
 async function handler(req, res) {
-    const urlObj = new URL(req.url, `http://${req.headers.host}`)
-    const urlPath = url2path(urlObj)
     try { // 不再推荐 exists API 而是先 读取 再 抓取错误
+        const urlPath = req2path(req) // 路径穿透 throw 会被抓住
         const fileStat = await fs.promises.stat(urlPath)
         let finalPath
         if (fileStat.isDirectory()) {
             // 目录文件 // 兜底默认路径
-            finalPath = path.resolve(urlPath, './index.html')
-            // 找不到文件时会直接 throw 被下面 catch 到
-            // const stat2 = await fs.promises.stat(finalPath)
-            // if (!stat2) {
-            //     res.statusCode = 404
-            //     res.write("Resource is not exist");
-            //     return
-            // }
+            finalPath = path.resolve(urlPath, 'index.html')
         } else {
             finalPath = urlPath
         }
+
+        // 先尝试 stat 读取
+        // 这样如果文件不存在也不会被下面 rs onError 误处理为 500
+        // 而是被 catch 正确处理为 404 
+        await fs.promises.stat(finalPath)
+
         res.statusCode = 200
         // 设置 MIME 类型 规范浏览器正确处理响应
         res.setHeader("Content-Type", getMimeType(finalPath))
 
-        // const fileContent = await fs.promises.readFile(finalPath)
-        // res.write(fileContent)
         const rs = fs.createReadStream(finalPath)
+        rs.on("error", () => {
+            if (!res.headersSent) {
+                res.statusCode = 500
+            }
+            res.end("Internal Server Error")
+        })
         rs.pipe(res)
     } catch (e) {
         // 不存在
-        res.statusCode = 404;
-        res.end("Resource is not exist");
+        res.statusCode = e.statusCode ?? 404
+        res.end(e.statusCode === 403 ? "Forbidden" : "Resource is not exist")
     }
 }
 
