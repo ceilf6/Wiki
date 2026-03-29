@@ -21,11 +21,19 @@ server.on("connection", socket => {
         const testFileBuffer = await fs.promises.readFile(testFilePath)
 
         // 头 Content-type 会影响浏览器的解析
-        const headBuffer = Buffer.from( // must be an instance of Buffer or Uint8Array
-            `HTTP/1.1 200 OK
-Content-Type: image/jpeg
+        //         const headBuffer = Buffer.from( // must be an instance of Buffer or Uint8Array
+        //             `HTTP/1.1 200 OK
+        // Content-Type: image/jpeg
 
-`)
+        // `)
+        const headBuffer = Buffer.from(
+            "HTTP/1.1 200 OK\r\n" +
+            "Content-Type: image/jpeg\r\n" +
+            `Content-Length: ${testFileBuffer.length}\r\n` +
+            "Connection: close\r\n" +
+            "\r\n" // 注意每一行结尾都需要 \r\n 否则客户端接受响应时会报错
+            // Parse Error: Missing expected CR after response line
+        )
 
         const totalBuffer = Buffer.concat([headBuffer, testFileBuffer]);
         socket.write(totalBuffer);
