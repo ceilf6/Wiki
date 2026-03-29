@@ -302,3 +302,7 @@
 - [NodeJS net模块 创建服务器监听并响应](https://github.com/ceilf6/Lab/commit/0282185b3a1d1923365daa6bb3f6147440c35f51)
 - [NodeJS http模块 发送请求](https://github.com/ceilf6/Lab/commit/131235ef510e1e4880659dfb6c2216dc59c4ca48)
 - [请求、响应 \r\n 格式](https://github.com/ceilf6/Lab/commit/92d0e58f1d3dafa53a18a1e96b6955183de1cbc7)
+- [通过 startsWith 校验防止../目录穿透 & 优化错误流收纳处理](https://github.com/ceilf6/Lab/commit/d6424b18778ac5c5b79384ed7a6d838a5697c1cc)
+- [服务补上 MIME 类型支持 添加Content-Type响应头](https://github.com/ceilf6/Lab/commit/49d99a0a77523be63c8378869decfdae5f7a52b0)
+- [NodeJS http模块 服务编写 静态资源服务器实践例子](https://github.com/ceilf6/Lab/commit/68a52f9bd89c7121fd7ebc9f7b66ac8c1a9ea272)
+- [<link> 标签要加 rel="stylesheet"，浏览器才会把它当成 CSS 文件加载](https://github.com/ceilf6/Lab/commit/bbea7301edb3ba6ffbf2020c100d4756954114d2)
