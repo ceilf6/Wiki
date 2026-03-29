@@ -306,3 +306,6 @@
 - [服务补上 MIME 类型支持 添加Content-Type响应头](https://github.com/ceilf6/Lab/commit/49d99a0a77523be63c8378869decfdae5f7a52b0)
 - [NodeJS http模块 服务编写 静态资源服务器实践例子](https://github.com/ceilf6/Lab/commit/68a52f9bd89c7121fd7ebc9f7b66ac8c1a9ea272)
 - [<link> 标签要加 rel="stylesheet"，浏览器才会把它当成 CSS 文件加载](https://github.com/ceilf6/Lab/commit/bbea7301edb3ba6ffbf2020c100d4756954114d2)
+- [NodeJS https模块配置](https://github.com/ceilf6/Lab/commit/350151d9c2578adcd89740e794221159dba5be86)
+- [openssl 1024 参数会被 https 报错"key too small" 至少需要 2048 参数](https://github.com/ceilf6/Lab/commit/c1ab26cd7557709020c66f9f612a01cbc8353362)
+- [模拟 CA 机构进行钥匙生成](https://github.com/ceilf6/Lab/commit/26c43f7fe505251d48fed5c6f8cfb1c6c8d73b00)
