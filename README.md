@@ -300,3 +300,5 @@
 - [实现文件复制 read write < copyFile < stream pipe < stream drain-resume](https://github.com/ceilf6/Lab/commit/e456acc8f23ab07fec0f89631c8b993eaf281a7c)
 - [NodeJS net模块 通过模拟解析响应配合Content-Length判断通信是否结束](https://github.com/ceilf6/Lab/commit/1ffeba2bc1b14c6b81a127c11ff8fd4659a27754)
 - [NodeJS net模块 创建服务器监听并响应](https://github.com/ceilf6/Lab/commit/0282185b3a1d1923365daa6bb3f6147440c35f51)
+- [NodeJS http模块 发送请求](https://github.com/ceilf6/Lab/commit/131235ef510e1e4880659dfb6c2216dc59c4ca48)
+- [请求、响应 \r\n 格式](https://github.com/ceilf6/Lab/commit/92d0e58f1d3dafa53a18a1e96b6955183de1cbc7)
