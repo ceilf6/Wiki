@@ -311,3 +311,5 @@
 - [模拟 CA 机构进行钥匙生成](https://github.com/ceilf6/Lab/commit/26c43f7fe505251d48fed5c6f8cfb1c6c8d73b00)
 - [NodeJS事件循环 poll阶段执行其他回调函数阻塞计时器回调的执行](https://github.com/ceilf6/Lab/commit/250942bcadd5d955af5961619f329abfc122f7c4)
 - [setImmediate 比 setTimeout 性能高 因为后者会在timer阶段事件队列（排序过的）中一个个计时器取出来看 但是前者是check阶段的、立即执行](https://github.com/ceilf6/Lab/commit/3a5beda41ae7051bc3565a5b8f5810117c3256a2)
+- [优化文件分块 字符数直接作为token会大3-4倍，对应增加了API调用次数，直接对token/3 子词切分增强搜索 增加了支持的文件语言 处理md列表过度分块 过滤无用的压缩文件](https://github.com/ceilf6/Lab/commit/02a3b949a83c766bb1a9d17d29b505df715d0784)
+- [setTimeout & setImmediate order 注意 setTimeout 最小也是 1 所以二者的顺序是不一定的 假如到 timers 时大于1了那么就先执行 setTimeout 否则 check 时执行 setImmediate 等到第二圈的时候再执行 timeout](https://github.com/ceilf6/Lab/commit/c4dfbd1be9568653f42b8ffd12bc50aff991bd9d)
