@@ -316,3 +316,4 @@
 - [claude code源码指针 - 封装大模型的智能体分层体系](https://github.com/ceilf6/cc-source/commit/ac812e268f5051a5d9b64c3379b04ffafec67361)
 
 - [agent-memory-optimizer 一个用于优化智能体记忆能力的skill](https://github.com/ceilf6/Lab/commit/0d08c9a3870104d34f76d3ceab4b185e8da91163)
+- [抽离自 [FrontAgent](https://github.com/ceilf6/FrontAgent) 的可复用skills skill-lifecycle 一个通过二元分析在全生命周期优化、迭代skill的skill frontend-design 用于提高智能体审美的skill requirement-interviewer 用于将用户的输入转为大模型更能理解的需求，从而提高大模型的输出质量 frontend-reviewer 前端侧的代码和UI审计skill](https://github.com/ceilf6/Lab/commit/b4273b4a240d044a200f8aeedb470f50addd377a)
