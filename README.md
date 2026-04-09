@@ -321,3 +321,4 @@
 - [agent-cli-architect 审计和设计 AI Agent CLI 的多模式入口架构：快路径检测、生命周期钩子、入口收敛复用、可扩展命令注册表](https://github.com/ceilf6/ceilf6-skills/tree/main/agent-cli-architect)
 - [tui-render-optimizer 审计和优化 React-based 终端 UI 渲染管线：HostConfig 适配器、脏标记+块拷贝增量渲染、终端 I/O 原子性防闪烁](https://github.com/ceilf6/ceilf6-skills/tree/main/tui-render-optimizer)
 - [agent-state-architect 设计流式 AI Agent 界面的分层状态架构：三级状态分层(全局/本地/外部)、集中式副作用处理器、跨 React/非React 边界状态桥接](https://github.com/ceilf6/ceilf6-skills/tree/main/agent-state-architect)
+- [使用 agent-cli-architect, tui-render-optimizer, agent-state-architect 技能包完成 CLI 主入口重构、核心事件系统增强以及 Ink TUI 的整体接入：](https://github.com/ceilf6/Lab/commit/263e2d12b9b5b5b2871a32f56a9a9199b2fc79b9)
