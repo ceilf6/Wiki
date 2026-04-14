@@ -323,3 +323,4 @@
 - [agent-state-architect 设计流式 AI Agent 界面的分层状态架构：三级状态分层(全局/本地/外部)、集中式副作用处理器、跨 React/非React 边界状态桥接](https://github.com/ceilf6/ceilf6-skills/tree/main/agent-state-architect)
 - [使用 agent-cli-architect, tui-render-optimizer, agent-state-architect 技能包完成 CLI 主入口重构、核心事件系统增强以及 Ink TUI 的整体接入：](https://github.com/ceilf6/Lab/commit/263e2d12b9b5b5b2871a32f56a9a9199b2fc79b9)
 - [通过位运算(八进制)管理权限](https://github.com/ceilf6/Lab/commit/258cba2a8a663461c5f94014e41dd09291139d70)
+- [Shell 脚本 目录文件摘要函数 日志错误统计 重要目录磁盘使用情况](https://github.com/ceilf6/Lab/commit/110ad351aa68f809cdc0dbc19f4cc16ead5a9cef)
