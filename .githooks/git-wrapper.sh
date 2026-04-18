@@ -5,6 +5,10 @@
 
 REAL_GIT="/usr/bin/git"
 LOG="/tmp/git-wrapper.log"
+SCRIPT_DIR=$(CDPATH= cd -- "$(dirname "$0")" && pwd)
+
+. "$SCRIPT_DIR/lib/bootstrap-path.sh"
+ensure_lab_tool_path
 
 detect_git_subcommand() {
   while [ "$#" -gt 0 ]; do

@@ -5,6 +5,10 @@
 
 set -e
 
+SCRIPT_DIR=$(CDPATH= cd -- "$(dirname "$0")/.." && pwd)
+. "$SCRIPT_DIR/lib/bootstrap-path.sh"
+ensure_lab_tool_path
+
 # 子模块根目录 & 父仓库根目录
 SUB_DIR=$(git rev-parse --show-toplevel)
 LATEST_MSG=$(git -C "$SUB_DIR" log -1 --pretty=%B)
