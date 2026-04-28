@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import getLab from "@/api/test";
+import getWiki from "@/api/test";
 import "../../mock";
 // import { Loading } from "@/components";
 import loadingUrl from "@/assets/loading.svg";
@@ -49,7 +49,7 @@ export default {
     };
   },
   async created() {
-    const res = await getLab();
+    const res = await getWiki();
     console.log(res);
     // request 封装已经自动取了两层data
     this.branches = res.branches + this.offset; // 如果在 beforeCreated 阶段就取不到 this.

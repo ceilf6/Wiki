@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import getLab from "@/api/test";
+import getWiki from "@/api/test";
 // import { Loading } from "@/components";
 import fetchData from "@/mixins/fetchData";
 
@@ -23,7 +23,7 @@ export default {
     };
   },
   // async created() {
-  //   const res = await getLab();
+  //   const res = await getWiki();
   //   console.log(res);
   //   // request 封装已经自动取了两层data
   //   this.branches = res.branches + this.offset; // 如果在 beforeCreated 阶段就取不到 this.
@@ -34,7 +34,7 @@ export default {
   // },
   methods: {
     async fetchData() {
-      return await getLab(); // 需要为 mixins 提供 fetchData 方法
+      return await getWiki(); // 需要为 mixins 提供 fetchData 方法
     },
   },
   created() {

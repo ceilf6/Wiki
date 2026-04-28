@@ -15,7 +15,7 @@ console.log(module)
 
 console.log(require)
 console.log(require.resolve('./'))
-// package main声明的 /Users/a86198/Desktop/Lab/NodeJS/sandboxs/mainDec.js
+// package main声明的 /Users/a86198/Desktop/Wiki/NodeJS/sandboxs/mainDec.js
 
 // this === exports === module.exports
 console.log('this === exports', this === exports)

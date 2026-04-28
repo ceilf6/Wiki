@@ -255,7 +255,7 @@
 - [openclaw 网关-统一鉴权 应用层协议 http 和 WebSocket 都只是薄封装，具体区别只是提取凭证方式不同](https://github.com/ceilf6/Wiki/commit/6e10c4117404517427efc95d953d5d489e26e9ec)
 - [将执行者executor可复用能力技能化](https://github.com/ceilf6/Wiki/commit/4705f912c9f8a877d94abd327e8a1e37e9b92135)
 - [RAG - 以 Wiki 的 README 作为根节点，展开知识图谱，README中每个链接都是一条边，用于获取目标知识](https://github.com/ceilf6/Wiki/commit/bc89bc8310db5c586f8558bcd2437ecd809eeeb5)
-- [如果 README-only 可能会过滤有用知识，升级为基于整个Lab(除子模块外)的 hybrid search](https://github.com/ceilf6/Wiki/commit/71d93c628089cd33e5b0f6b65a3ed2f871f21bb2)
+- [如果 README-only 可能会过滤有用知识，升级为基于整个 Wiki(除子模块外)的 hybrid search](https://github.com/ceilf6/Wiki/commit/71d93c628089cd33e5b0f6b65a3ed2f871f21bb2)
 - [嵌入模型服务来源默认走LLM的配置](https://github.com/ceilf6/Wiki/commit/99390c8ff23c4932dc2516ab8d6631695b6c45d5)
 - [嵌入模型端口需要在大模型的"v1"后加上"/embeddings"](https://github.com/ceilf6/Wiki/commit/cabfeea691baee2616c017296a3b63b4da90a4c9)
 - [两次BFS/DFS求树的直径](https://github.com/ceilf6/Wiki/commit/cea2c619aafcea474046df5e3c735ab9d85c70a5)

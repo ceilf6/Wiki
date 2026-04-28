@@ -3,7 +3,7 @@
 # 克隆仓库后执行一次: sh scripts/setup-hooks.sh
 #
 # 目标：
-# 1. 终端里的 git push 成功后，若当前位于子模块，则自动同步 Lab 父仓库
+# 1. 终端里的 git push 成功后，若当前位于子模块，则自动同步 Wiki 父仓库
 # 2. VS Code Source Control 使用仓库内的 git-wrapper.sh，从而具备同样能力
 
 set -e
@@ -12,8 +12,8 @@ REPO_ROOT=$(cd "$(dirname "$0")/.." && pwd)
 ZSHRC="$HOME/.zshrc"
 HOOK_SCRIPT="$REPO_ROOT/.githooks/submodule/post-push"
 WRAPPER_SCRIPT="$REPO_ROOT/.githooks/git-wrapper.sh"
-BEGIN_MARKER="# >>> Lab submodule post-push sync <<<"
-END_MARKER="# <<< Lab submodule post-push sync <<<"
+BEGIN_MARKER="# >>> Wiki submodule post-push sync <<<"
+END_MARKER="# <<< Wiki submodule post-push sync <<<"
 SHELL_BLOCK=$(cat <<EOF
 $BEGIN_MARKER
 # 统一走仓库内的 git wrapper，确保终端与 VS Code 的触发逻辑一致
@@ -31,17 +31,17 @@ ensure_zsh_wrapper() {
     : > "$ZSHRC"
   fi
 
-  TMP_ZSHRC=$(mktemp "${TMPDIR:-/tmp}/lab-zshrc.XXXXXX")
-  if grep -qF "$BEGIN_MARKER" "$ZSHRC" 2>/dev/null; then
-    awk -v begin="$BEGIN_MARKER" -v end="$END_MARKER" '
+  TMP_ZSHRC=$(mktemp "${TMPDIR:-/tmp}/wiki-zshrc.XXXXXX")
+  if grep -q "submodule post-push sync" "$ZSHRC" 2>/dev/null; then
+    awk '
       BEGIN {
         inside = 0
       }
-      $0 == begin {
+      $0 ~ /^# >>> .* submodule post-push sync <<</ {
         inside = 1
         next
       }
-      $0 == end {
+      $0 ~ /^# <<< .* submodule post-push sync <<</ {
         inside = 0
         next
       }
@@ -80,7 +80,7 @@ EOF
     return
   fi
 
-  TMP_SETTINGS=$(mktemp "${TMPDIR:-/tmp}/lab-vscode-settings.XXXXXX")
+  TMP_SETTINGS=$(mktemp "${TMPDIR:-/tmp}/wiki-vscode-settings.XXXXXX")
   if grep -q '"git\.path"[[:space:]]*:' "$SETTINGS_FILE"; then
     awk -v wrapper="$WRAPPER_SCRIPT" '
       BEGIN {
@@ -179,4 +179,4 @@ fi
 
 echo ">>> 完成！请重新打开终端，或执行: source ~/.zshrc"
 echo ">>> 然后重载 VS Code 窗口（Cmd+Shift+P -> Reload Window）使 git.path 生效。"
-echo ">>> 之后在任意 Lab 子模块中通过终端或 VS Code Source Control 执行 git push，都将自动同步 Lab 父仓库。"
+echo ">>> 之后在任意 Wiki 子模块中通过终端或 VS Code Source Control 执行 git push，都将自动同步 Wiki 父仓库。"

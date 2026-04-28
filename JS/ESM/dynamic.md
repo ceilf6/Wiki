@@ -1,1 +1,1 @@
-[EMS静态分析的限制](https://github.com/ceilf6/Lab/commit/9f9832160164d299e88deb43168a1303177f8ebd)
+[EMS静态分析的限制](https://github.com/ceilf6/Wiki/commit/9f9832160164d299e88deb43168a1303177f8ebd)

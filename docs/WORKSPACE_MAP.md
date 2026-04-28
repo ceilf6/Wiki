@@ -2,7 +2,7 @@
 
 # WORKSPACE_MAP
 
-> 位置：`/Users/a86198/Desktop/Lab`
+> 位置：`/Users/a86198/Desktop/Wiki`
 >
 > 这不是单一业务项目，而是一个 **个人技术实验室 / 知识库 / OpenClaw 工作区**。
 > 核心主题集中在：**前端、浏览器原理、JavaScript/TypeScript、React/Vue、网络、AI 应用**。
@@ -431,7 +431,7 @@ README 提到它是一个子模块，用来研究与重写优秀工程方案。
 
 ## 3.15 `docs/`
 
-`docs/_README.md` 对整个 Lab 的说明非常关键：
+`docs/_README.md` 对整个 Wiki 的说明非常关键：
 
 - 这是一个 Vite 驱动的实验 playground
 - 实验模块放进 `sandboxs/<name>/`
@@ -447,7 +447,7 @@ README 提到它是一个子模块，用来研究与重写优秀工程方案。
 
 **适合做什么：**
 - 先看入口说明
-- 给后来者解释这个 Lab 是怎么组织的
+- 给后来者解释这个 Wiki 是怎么组织的
 
 ---
 
@@ -520,7 +520,7 @@ README 提到它是一个子模块，用来研究与重写优秀工程方案。
 
 ### 第一入口：`README.md`
 
-这里定义了整个 Lab 的定位：
+这里定义了整个 Wiki 的定位：
 
 - 一个基于 Vite 的实验 playground
 - 支持多模块

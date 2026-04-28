@@ -1,7 +1,7 @@
 #!/bin/sh
-# 子模块 push 后，自动同步父仓库 Lab 的子模块指针并推送
+# 子模块 push 后，自动同步父仓库 Wiki 的子模块指针并推送
 # 为子模块的每一个提交在父仓库中单独生成一条对应 commit（一步一步跟进）
-# 通过 core.hooksPath 配置加载，脚本本身受 Lab 仓库版本控制
+# 通过 core.hooksPath 配置加载，脚本本身受 Wiki 仓库版本控制
 
 set -e
 
@@ -23,14 +23,14 @@ fi
 SUB_REL=$(realpath --relative-to="$PARENT_DIR" "$SUB_DIR" 2>/dev/null \
   || python3 -c "import os; print(os.path.relpath('$SUB_DIR','$PARENT_DIR'))")
 
-echo "[post-push] 同步父仓库 Lab 子模块指针（逐提交模式）..."
+echo "[post-push] 同步父仓库 Wiki 子模块指针（逐提交模式）..."
 
 cd "$PARENT_DIR" || exit 1
 
 # 先拉取远端最新，避免 non-fast-forward 推送失败
 git pull --no-rebase --no-edit
 
-# 默认把 Lab 父仓库当前工作区的所有改动一起带上，
+# 默认把 Wiki 父仓库当前工作区的所有改动一起带上，
 # 避免子模块同步时漏掉同批次的父仓库修改。
 git add -A
 
@@ -44,7 +44,7 @@ if [ "$OLD_SHA" = "$NEW_SHA" ]; then
     echo "[post-push] 父仓库无需更新（指针未变化且工作区无变更）"
     exit 0
   fi
-  echo "[post-push] 子模块指针未变化，改为提交 Lab 工作区改动..."
+  echo "[post-push] 子模块指针未变化，改为提交 Wiki 工作区改动..."
   COMMITS="$NEW_SHA"
 else
   # 某些大体量/高频同步子模块只需要在父仓库记录最终指针，
@@ -85,7 +85,7 @@ echo "[post-push] 共创建 $COUNT 条父仓库提交，开始推送..."
 PUSH_RETRY=3
 while [ $PUSH_RETRY -gt 0 ]; do
   if git push; then
-    echo "[post-push] 父仓库 Lab 已同步推送（$COUNT 条提交）"
+    echo "[post-push] 父仓库 Wiki 已同步推送（$COUNT 条提交）"
     break
   fi
   PUSH_RETRY=$((PUSH_RETRY - 1))

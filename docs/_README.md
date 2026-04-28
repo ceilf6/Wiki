@@ -1,4 +1,4 @@
-# Lab
+# Wiki
 
 [中文文档](./docs/README-CN.md)
 
@@ -57,4 +57,3 @@ The server will start at `http://localhost:8030` and automatically open the brow
 - Homepage automatically lists all available examples
 
 A demo is included in `sandboxs/demo`.
-

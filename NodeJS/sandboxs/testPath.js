@@ -29,6 +29,6 @@ const path2 = "a1/a3"
 console.log(path.relative(path1, path2))
 // 从 path1 => path2
 
-console.log(path.resolve("./index.js")) // 执行命令的位置即 process.cwd() /Users/a86198/Desktop/Lab
+console.log(path.resolve("./index.js")) // 执行命令的位置即 process.cwd() /Users/a86198/Desktop/Wiki
 // 绝对路径
 console.log(path.resolve(__dirname, "./index.js")) // 通过 __dirname 校准

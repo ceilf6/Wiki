@@ -3,11 +3,11 @@
 const URL = require("url")
 
 // URL对象
-const urlObj = new URL.URL("https://github.com:666/ceilf6/Lab?name=ceilf6&key=so-handsome")
+const urlObj = new URL.URL("https://github.com:666/ceilf6/Wiki?name=ceilf6&key=so-handsome")
 console.log(urlObj)
 /*
 URL {
-  href: 'https://github.com:666/ceilf6/Lab?name=ceilf6&key=so-handsome',
+  href: 'https://github.com:666/ceilf6/Wiki?name=ceilf6&key=so-handsome',
   origin: 'https://github.com:666',
   protocol: 'https:',
   username: '',
@@ -15,7 +15,7 @@ URL {
   host: 'github.com:666',
   hostname: 'github.com',
   port: '666',
-  pathname: '/ceilf6/Lab',
+  pathname: '/ceilf6/Wiki',
   search: '?name=ceilf6&key=so-handsome',
   searchParams: URLSearchParams { 'name' => 'ceilf6', 'key' => 'so-handsome' },
   hash: ''

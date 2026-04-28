@@ -10,8 +10,8 @@ console.log(bufferArr) // <Buffer 63 65 69 6c 66 36>
 
 console.log(process.cwd())
 /*
-a86198@wangjinghongdeMacBook-Pro Lab % node NodeJS/sandboxs/index.js
-/Users/a86198/Desktop/Lab
+a86198@wangjinghongdeMacBook-Pro Wiki % node NodeJS/sandboxs/index.js
+/Users/a86198/Desktop/Wiki
 */
 
 // for (let i = 0; i < 10; i++) {
@@ -23,10 +23,10 @@ a86198@wangjinghongdeMacBook-Pro Lab % node NodeJS/sandboxs/index.js
 
 console.log(process.argv) // 获取命令的所有 args
 /*
-node "/Users/a86198/Desktop/Lab/NodeJS/sandboxs/index.js" ceilf6 so handsome
+node "/Users/a86198/Desktop/Wiki/NodeJS/sandboxs/index.js" ceilf6 so handsome
 [
   '/opt/homebrew/Cellar/node/24.7.0/bin/node',
-  '/Users/a86198/Desktop/Lab/NodeJS/sandboxs/index.js',
+  '/Users/a86198/Desktop/Wiki/NodeJS/sandboxs/index.js',
   'ceilf6',
   'so',
   'handsome'

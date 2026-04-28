@@ -1,4 +1,4 @@
-# Lab
+# Wiki
 
 [English](../README.md)
 
