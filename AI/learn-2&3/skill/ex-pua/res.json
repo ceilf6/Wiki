@@ -1,0 +1,331 @@
+// SSE
+
+event: message_start
+data: {
+    "type": "message_start",
+    "message": {
+        "id": "msg_27AHMOHdmTShUtzqV5nMmYVP",
+        "type": "message",
+        "role": "assistant",
+        "content": [],
+        "model": "zai-org/GLM-4.6",
+        "stop_reason": null,
+        "stop_sequence": null,
+        "usage": {
+            "input_tokens": 26515,
+            "output_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "cache_creation_input_tokens": 0
+        }
+    }
+}
+
+event: content_block_start
+data: {
+    "type": "content_block_start",
+    "index": 0,
+    "content_block": {
+        "type": "thinking",
+        "thinking": ""
+    }
+}
+
+event: content_block_delta
+data: {
+    "type": "content_block_delta",
+    "index": 0,
+    "delta": {
+        "type": "thinking_delta",
+        "thinking": "\n"
+    }
+}
+
+event: content_block_delta
+data: {
+    "type": "content_block_delta",
+    "index": 0,
+    "delta": {
+        "type": "signature_delta",
+        "signature": "yekgwgxjzj"
+    }
+}
+
+event: content_block_stop
+data: {
+    "type": "content_block_stop",
+    "index": 0
+}
+
+event: content_block_start
+data: {
+    "type": "content_block_start",
+    "index": 1,
+    "content_block": {
+        "type": "text",
+        "text": ""
+    }
+}
+
+event: content_block_delta
+data: {
+    "type": "content_block_delta",
+    "index": 1,
+    "delta": {
+        "type": "text_delta",
+        "text": "\n"
+    }
+}
+
+event: content_block_stop
+data: {
+    "type": "content_block_stop",
+    "index": 1
+}
+
+event: content_block_start
+data: {
+    "type": "content_block_start",
+    "index": 2,
+    "content_block": {
+        "type": "tool_use",
+        "id": "019df744aef2b8bfd0beaae7b6483f9b",
+        "name": "Skill",
+        "input": {}
+    }
+}
+
+event: content_block_delta
+data: {
+    "type": "content_block_delta",
+    "index": 2,
+    "delta": {
+        "type": "input_json_delta",
+        "partial_json": ""
+    }
+}
+
+event: content_block_delta
+data: {
+    "type": "content_block_delta",
+    "index": 2,
+    "delta": {
+        "type": "input_json_delta",
+        "partial_json": "{"
+    }
+}
+
+event: content_block_delta
+data: {
+    "type": "content_block_delta",
+    "index": 2,
+    "delta": {
+        "type": "input_json_delta",
+        "partial_json": "\"skill\": "
+    }
+}
+
+event: content_block_delta
+data: {
+    "type": "content_block_delta",
+    "index": 2,
+    "delta": {
+        "type": "input_json_delta",
+        "partial_json": "\"p"
+    }
+}
+
+event: content_block_delta
+data: {
+    "type": "content_block_delta",
+    "index": 2,
+    "delta": {
+        "type": "input_json_delta",
+        "partial_json": "ua"
+    }
+}
+
+event: content_block_delta
+data: {
+    "type": "content_block_delta",
+    "index": 2,
+    "delta": {
+        "type": "input_json_delta",
+        "partial_json": ":p"
+    }
+}
+
+event: content_block_delta
+data: {
+    "type": "content_block_delta",
+    "index": 2,
+    "delta": {
+        "type": "input_json_delta",
+        "partial_json": "ua"
+    }
+}
+
+event: content_block_delta
+data: {
+    "type": "content_block_delta",
+    "index": 2,
+    "delta": {
+        "type": "input_json_delta",
+        "partial_json": "\""
+    }
+}
+
+event: content_block_delta
+data: {
+    "type": "content_block_delta",
+    "index": 2,
+    "delta": {
+        "type": "input_json_delta",
+        "partial_json": ", "
+    }
+}
+
+event: content_block_delta
+data: {
+    "type": "content_block_delta",
+    "index": 2,
+    "delta": {
+        "type": "input_json_delta",
+        "partial_json": "\"args\": "
+    }
+}
+
+event: content_block_delta
+data: {
+    "type": "content_block_delta",
+    "index": 2,
+    "delta": {
+        "type": "input_json_delta",
+        "partial_json": "\"修复"
+    }
+}
+
+event: content_block_delta
+data: {
+    "type": "content_block_delta",
+    "index": 2,
+    "delta": {
+        "type": "input_json_delta",
+        "partial_json": "代理"
+    }
+}
+
+event: content_block_delta
+data: {
+    "type": "content_block_delta",
+    "index": 2,
+    "delta": {
+        "type": "input_json_delta",
+        "partial_json": "服务器"
+    }
+}
+
+event: content_block_delta
+data: {
+    "type": "content_block_delta",
+    "index": 2,
+    "delta": {
+        "type": "input_json_delta",
+        "partial_json": "日志"
+    }
+}
+
+event: content_block_delta
+data: {
+    "type": "content_block_delta",
+    "index": 2,
+    "delta": {
+        "type": "input_json_delta",
+        "partial_json": "中的"
+    }
+}
+
+event: content_block_delta
+data: {
+    "type": "content_block_delta",
+    "index": 2,
+    "delta": {
+        "type": "input_json_delta",
+        "partial_json": "响应"
+    }
+}
+
+event: content_block_delta
+data: {
+    "type": "content_block_delta",
+    "index": 2,
+    "delta": {
+        "type": "input_json_delta",
+        "partial_json": "乱"
+    }
+}
+
+event: content_block_delta
+data: {
+    "type": "content_block_delta",
+    "index": 2,
+    "delta": {
+        "type": "input_json_delta",
+        "partial_json": "码"
+    }
+}
+
+event: content_block_delta
+data: {
+    "type": "content_block_delta",
+    "index": 2,
+    "delta": {
+        "type": "input_json_delta",
+        "partial_json": "问题"
+    }
+}
+
+event: content_block_delta
+data: {
+    "type": "content_block_delta",
+    "index": 2,
+    "delta": {
+        "type": "input_json_delta",
+        "partial_json": "\""
+    }
+}
+
+event: content_block_delta
+data: {
+    "type": "content_block_delta",
+    "index": 2,
+    "delta": {
+        "type": "input_json_delta",
+        "partial_json": "}"
+    }
+}
+
+event: content_block_stop
+data: {
+    "type": "content_block_stop",
+    "index": 2
+}
+
+event: message_delta
+data: {
+    "type": "message_delta",
+    "delta": {
+        "stop_reason": "tool_use",
+        "stop_sequence": null
+    },
+    "usage": {
+        "input_tokens": 26515,
+        "output_tokens": 35,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0
+    }
+}
+
+event: message_stop
+data: {
+    "type": "message_stop"
+}
