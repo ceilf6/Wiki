@@ -5,7 +5,6 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$SCRIPT_DIR"
 
 PORT=3000
-READY_URL="http://127.0.0.1:${PORT}/v1/models?limit=1"
 NO_PROXY_VALUE="localhost,127.0.0.1"
 LAUNCHER_LOG="$SCRIPT_DIR/logs/start-claude-with-proxy.log"
 PROXY_PID=""
@@ -44,8 +43,7 @@ for _ in $(seq 1 30); do
     exit 1
   fi
 
-  http_code="$(curl --noproxy '*' -s -o /dev/null -w '%{http_code}' "$READY_URL" || true)"
-  if [[ "$http_code" != "000" ]]; then
+  if (: >"/dev/tcp/127.0.0.1/$PORT") 2>/dev/null; then
     ready=1
     break
   fi
