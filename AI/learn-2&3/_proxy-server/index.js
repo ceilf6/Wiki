@@ -12,6 +12,7 @@ const PORT = parseInt(process.env.PORT || '3000', 10);
 const LOG_DIR = process.env.LOG_DIR || './logs';
 const LOG_LEVEL = process.env.LOG_LEVEL || 'info';
 const MAX_LOG_FILES = 20;
+const MAX_TIMESTAMP_MS = 9999999999999;
 
 if (!TARGET_URL) {
   console.error('错误: 必须设置 TARGET_URL 环境变量');
@@ -44,6 +45,11 @@ function generateRequestId() {
 
 function getTimestamp() {
   return new Date().toISOString().replace(/[:.]/g, '-');
+}
+
+function getReverseTimestampSortKey() {
+  // Prefix with a reverse time key so lexicographic ascending order shows newest logs first.
+  return String(MAX_TIMESTAMP_MS - Date.now()).padStart(13, '0');
 }
 
 function cleanupOldLogs() {
@@ -161,7 +167,7 @@ ${body.toString('base64')}`;
 
 function logRequestResponse(reqId, req, reqBody, res, resBody, duration, targetUrl) {
   const timestamp = getTimestamp();
-  const filename = `request-${timestamp}-${reqId}.log`;
+  const filename = `request-0-${getReverseTimestampSortKey()}-${timestamp}-${reqId}.log`;
   const filepath = path.join(LOG_DIR, filename);
 
   const responseHeaders = req.proxyResponseHeaders || res.getHeaders?.() || res.headers || {};
@@ -286,7 +292,7 @@ server.on('upgrade', (req, socket, head) => {
   log('info', `⇄ WebSocket 升级 ${req.url} [${reqId}]`);
 
   const timestamp = getTimestamp();
-  const filename = `request-${timestamp}-${reqId}-websocket.log`;
+  const filename = `request-0-${getReverseTimestampSortKey()}-${timestamp}-${reqId}-websocket.log`;
   const filepath = path.join(LOG_DIR, filename);
 
   const logContent = `=================================

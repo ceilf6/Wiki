@@ -93,8 +93,10 @@ npm start
 日志文件保存在 `LOG_DIR` 目录下，文件命名格式：
 
 ```
-request-YYYY-MM-DD-HHmmss-UUID.log
+request-0-反向时间排序键-YYYY-MM-DD-HHmmss-UUID.log
 ```
+
+`反向时间排序键` 用于让文件名按字典序升序排列时，新日志显示在旧日志上面。
 
 每个请求响应保存为一个独立的日志文件，包含：
 - 请求方法、URL、Headers、Body

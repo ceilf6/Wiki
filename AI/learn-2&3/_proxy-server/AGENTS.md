@@ -53,8 +53,10 @@ proxy-server/
 
 ### 日志文件命名
 ```
-request-YYYY-MM-DD-HHmmss-UUID.log
+request-0-反向时间排序键-YYYY-MM-DD-HHmmss-UUID.log
 ```
+
+反向时间排序键用于让文件名按字典序升序排列时，新日志显示在旧日志上面。
 
 ### 日志内容格式
 - 请求时间
