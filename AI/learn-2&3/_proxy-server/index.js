@@ -4,6 +4,8 @@ const http = require('http');
 const httpProxy = require('http-proxy');
 const fs = require('fs');
 const path = require('path');
+const zlib = require('zlib');
+const { TextDecoder } = require('util');
 
 const TARGET_URL = process.env.TARGET_URL;
 const PORT = parseInt(process.env.PORT || '3000', 10);
@@ -77,14 +79,95 @@ function formatHeaders(headers) {
     .join('\n');
 }
 
+function getHeader(headers, name) {
+  const target = name.toLowerCase();
+  for (const [key, value] of Object.entries(headers || {})) {
+    if (key.toLowerCase() === target) {
+      return Array.isArray(value) ? value.join(', ') : String(value);
+    }
+  }
+  return '';
+}
+
+function decodeContentEncoding(buffer, encoding) {
+  const normalized = encoding.toLowerCase().trim();
+  if (!normalized || normalized === 'identity') {
+    return { buffer, note: 'identity' };
+  }
+
+  if (normalized === 'gzip' || normalized === 'x-gzip') {
+    return { buffer: zlib.gunzipSync(buffer), note: normalized };
+  }
+
+  if (normalized === 'br') {
+    return { buffer: zlib.brotliDecompressSync(buffer), note: normalized };
+  }
+
+  if (normalized === 'deflate') {
+    try {
+      return { buffer: zlib.inflateSync(buffer), note: normalized };
+    } catch (err) {
+      return { buffer: zlib.inflateRawSync(buffer), note: `${normalized} (raw)` };
+    }
+  }
+
+  return { buffer, note: `unsupported: ${normalized}` };
+}
+
+function decodeUtf8(buffer) {
+  try {
+    return new TextDecoder('utf-8', { fatal: true }).decode(buffer);
+  } catch (err) {
+    return null;
+  }
+}
+
+function formatBodyForLog(body, headers) {
+  if (!body || body.length === 0) {
+    return '(无)';
+  }
+
+  const encoding = getHeader(headers, 'content-encoding');
+  let decoded = body;
+  let decodeNote = 'identity';
+  let decodeError = '';
+
+  try {
+    const result = decodeContentEncoding(body, encoding);
+    decoded = result.buffer;
+    decodeNote = result.note;
+  } catch (err) {
+    decodeNote = encoding || 'identity';
+    decodeError = err.message;
+  }
+
+  const decodedText = decodeUtf8(decoded);
+  const decodedSection = decodedText === null
+    ? '(非 UTF-8 文本，请查看原始 body base64)'
+    : decodedText;
+
+  return `--- body metadata ---
+raw_bytes: ${body.length}
+decoded_bytes: ${decoded.length}
+content_encoding: ${encoding || 'identity'}
+decode: ${decodeNote}${decodeError ? ` (failed: ${decodeError})` : ''}
+
+--- decoded body ---
+${decodedSection || '(空字符串)'}
+
+--- raw body base64 ---
+${body.toString('base64')}`;
+}
+
 function logRequestResponse(reqId, req, reqBody, res, resBody, duration, targetUrl) {
   const timestamp = getTimestamp();
   const filename = `request-${timestamp}-${reqId}.log`;
   const filepath = path.join(LOG_DIR, filename);
 
-  // 直接按 UTF-8 解码，不做任何 base64 转换
-  const reqBodyStr = reqBody ? reqBody.toString('utf8') : '';
-  const resBodyStr = resBody ? resBody.toString('utf8') : '';
+  const responseHeaders = req.proxyResponseHeaders || res.getHeaders?.() || res.headers || {};
+  const responseStatusMessage = req.proxyResponseStatusMessage || res.statusMessage || '';
+  const reqBodyStr = formatBodyForLog(reqBody, req.headers);
+  const resBodyStr = formatBodyForLog(resBody, responseHeaders);
 
   const logContent = `=================================
 转发目标: ${targetUrl}
@@ -107,10 +190,10 @@ ${reqBodyStr || '(无)'}
 
 === 响应信息 ===
 状态码: ${res.statusCode}
-状态消息: ${res.statusMessage || ''}
+状态消息: ${responseStatusMessage}
 
 响应头:
-${formatHeaders(res.headers || {})}
+${formatHeaders(responseHeaders)}
 
 响应体:
 ${resBodyStr || '(无)'}
@@ -245,6 +328,8 @@ proxy.on('proxyReq', (proxyReq, req, res) => {
 });
 
 proxy.on('proxyRes', (proxyRes, req, res) => {
+  req.proxyResponseHeaders = proxyRes.headers || {};
+  req.proxyResponseStatusMessage = proxyRes.statusMessage || '';
   log('debug', `代理响应: ${proxyRes.statusCode} ${req.url}`);
 });
 
