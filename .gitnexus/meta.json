@@ -1,13 +1,13 @@
 {
   "repoPath": "/Users/ceilf6/Desktop/myrepos/Wiki",
-  "lastCommit": "2ce85b3b431fc39c00b85000216e3d22725e813c",
-  "indexedAt": "2026-05-06T06:51:35.082Z",
+  "lastCommit": "2dda2d73d33d5b53e4ab6fcd840eb6565c0feb95",
+  "indexedAt": "2026-05-06T07:44:21.891Z",
   "remoteUrl": "https://github.com/ceilf6/Wiki",
   "stats": {
-    "files": 19128,
-    "nodes": 287187,
-    "edges": 829420,
-    "communities": 7076,
+    "files": 20067,
+    "nodes": 308220,
+    "edges": 857655,
+    "communities": 7472,
     "processes": 300,
     "embeddings": 0
   }
