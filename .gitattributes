@@ -6,3 +6,4 @@
 *.jpeg filter=lfs diff=lfs merge=lfs -text
 *.png filter=lfs diff=lfs merge=lfs -text
 *.gif filter=lfs diff=lfs merge=lfs -text
+.gitnexus/lbug filter=lfs diff=lfs merge=lfs -text

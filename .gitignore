@@ -1,6 +1,6 @@
 node_modules/
 dist/
-.gitnexus/
+# .gitnexus/
 sandboxs/**/__entry.tsx
 sandboxs/**/__entry.jsx
 .trae
