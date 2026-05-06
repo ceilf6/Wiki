@@ -338,3 +338,4 @@
 - [添加埋点进行流量分析 Cloudflare web-analytics](https://github.com/ceilf6/Wiki/commit/4c14a15cbd221f06c90aae66df3ffdff53eb10c8)
 - [根据 proxyman 抓包分析 claude code 后的结论，引入 “先观察，再操作” 以及 “渐进式探索的思想：面对不确定的文件系统状态，像二分一样逐步缩小范围，先 Glob 全局搜索，再 Bash 精确确认，最终才执行写入操作“](https://github.com/ceilf6/Wiki/commit/f87072fba2174e30fa461f643632c71db7e74ae0)
 - [通过 proxy-server 分析 skill 在初始化时 cc 告诉 模型 如何使用技能 用户输入后会拼接系统提示词告诉 模型 如何使用技能以及何时使用 大模型后续会按照要求的 json 格式调用和 cc 进行交互](https://github.com/ceilf6/Wiki/commit/1edf5b6c0df6f32d6a7a276bab86c78ea0b76292)
+- [gitnexus 在 CLAUDE.md 入口中告诉了大模型如何操作使用 .claude/skills/gitnexus](https://github.com/ceilf6/Wiki/commit/327249bb42a2213b44a0081120aa102f9ef986ad)
