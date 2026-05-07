@@ -30,5 +30,8 @@
   "code-runner.runInTerminal": true,
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
-  }
+  },
+  "frontagent.provider": "openai",
+  "frontagent.model": "mimo-v2.5-pro",
+  "frontagent.baseUrl": "https://token-plan-cn.xiaomimimo.com/v1"
 }
