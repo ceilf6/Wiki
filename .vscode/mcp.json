@@ -8,10 +8,33 @@
 				"https://registry.npmjs.org",
 				"chrome-devtools-mcp@0.25.0"
 			],
-            // npx --registry https://registry.npmjs.org chrome-devtools-mcp@0.25.0
 			"gallery": "https://api.mcp.github.com",
 			"version": "0.25.0"
-		}
+		},
+		// "com.figma.mcp/mcp": {
+		// 	"type": "http",
+		// 	"url": "https://mcp.figma.com/mcp",
+		// 	"gallery": "https://api.mcp.github.com",
+		// 	"version": "1.0.3"
+		// },
+		// "microsoft/markitdown": {
+		// 	"type": "stdio",
+		// 	"command": "uvx",
+		// 	"args": [
+		// 		"markitdown-mcp@0.0.1a4"
+		// 	],
+		// 	"gallery": "https://api.mcp.github.com",
+		// 	"version": "1.0.0"
+		// },
+		// "microsoft/playwright-mcp": {
+		// 	"type": "stdio",
+		// 	"command": "npx",
+		// 	"args": [
+		// 		"@playwright/mcp@latest"
+		// 	],
+		// 	"gallery": "https://api.mcp.github.com",
+		// 	"version": "0.0.1-seed"
+		// }
 	},
 	"inputs": []
 }
