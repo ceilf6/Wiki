@@ -45,7 +45,7 @@
 	url = https://github.com/ceilf6/cc-source
 [submodule "AI/2-AI-infra/ceilf6-skills-app"]
 	path = AI/2-AI-infra/ceilf6-skills-app
-	url = https://github.com/ceilf6/skills
+	url = https://github.com/ceilf6/ceilf6-skills
 [submodule "operating-system-app"]
 	path = operating-system-app
 	url = https://github.com/ceilf6/operating-system
