@@ -340,3 +340,4 @@
 - [通过 proxy-server 分析 skill 在初始化时 cc 告诉 模型 如何使用技能 用户输入后会拼接系统提示词告诉 模型 如何使用技能以及何时使用 大模型后续会按照要求的 json 格式调用和 cc 进行交互](https://github.com/ceilf6/Wiki/commit/1edf5b6c0df6f32d6a7a276bab86c78ea0b76292)
 - [gitnexus 在 CLAUDE.md 入口中告诉了大模型如何操作使用 .claude/skills/gitnexus](https://github.com/ceilf6/Wiki/commit/327249bb42a2213b44a0081120aa102f9ef986ad)
 - [.gitnexus 存放了 analyze 后的数据库文件 IBUG 以及 wiki 后的文档](.gitnexus)
+- [系统提示词](AI/learn-2&3/GLOBAL-AGENTS.md) [工程提示词](AI/learn-2&3/REP-AGENTS.md)
