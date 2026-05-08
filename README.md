@@ -341,3 +341,4 @@
 - [gitnexus 在 CLAUDE.md 入口中告诉了大模型如何操作使用 .claude/skills/gitnexus](https://github.com/ceilf6/Wiki/commit/327249bb42a2213b44a0081120aa102f9ef986ad)
 - [.gitnexus 存放了 analyze 后的数据库文件 IBUG 以及 wiki 后的文档](.gitnexus)
 - [系统提示词](AI/learn-2&3/GLOBAL-AGENTS.md) [工程提示词](AI/learn-2&3/REP-AGENTS.md)
+- [mcp-server 获取定制化工具能力 @mcp 搜索 vscode mcp 市场](https://github.com/ceilf6/Wiki/commit/c355225ed004a0768311ce042925f780ec3a9279)
