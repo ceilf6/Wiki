@@ -55,3 +55,6 @@
 [submodule "AI/3-Application/GitNexus-source"]
 	path = AI/3-Application/GitNexus-source
 	url = https://github.com/ceilf6/GitNexus
+[submodule "machine-learning"]
+	path = machine-learning
+	url = https://github.com/ceilf6/machine-learning
