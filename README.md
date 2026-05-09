@@ -344,3 +344,4 @@
 - [mcp-server 获取定制化工具能力 @mcp 搜索 vscode mcp 市场](https://github.com/ceilf6/Wiki/commit/c355225ed004a0768311ce042925f780ec3a9279)
 - [从 FrontAgent 提取提示词和 Schema，编写数据生成脚本](https://github.com/ceilf6/Wiki/commit/5c1c50ccd380fc6fc538120a054a9ba222f73e4b)
 - [Unsloth SFT 微调训练脚本](https://github.com/ceilf6/Wiki/commit/52d9fbd055a613cbe4a0c66478327d0bfd5a1c42)
+- [推理评估脚本](https://github.com/ceilf6/Wiki/commit/b56b63b1808b0e19fe98ca8785a04c12b0d38c44)
