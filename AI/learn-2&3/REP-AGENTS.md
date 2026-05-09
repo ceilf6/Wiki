@@ -4,4 +4,4 @@
 ## 技术栈与工程结构
 
 ## Git规范
-需要时查看 [git-role](./git-role.md)
+需要提交时查看 [git-role](./git-role.md)
