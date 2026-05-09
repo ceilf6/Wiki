@@ -342,3 +342,4 @@
 - [.gitnexus 存放了 analyze 后的数据库文件 IBUG 以及 wiki 后的文档](.gitnexus)
 - [系统提示词](AI/learn-2&3/GLOBAL-AGENTS.md) [工程提示词](AI/learn-2&3/REP-AGENTS.md)
 - [mcp-server 获取定制化工具能力 @mcp 搜索 vscode mcp 市场](https://github.com/ceilf6/Wiki/commit/c355225ed004a0768311ce042925f780ec3a9279)
+- [从 FrontAgent 提取提示词和 Schema，编写数据生成脚本](https://github.com/ceilf6/Wiki/commit/5c1c50ccd380fc6fc538120a054a9ba222f73e4b)
