@@ -345,3 +345,4 @@
 - [从 FrontAgent 提取提示词和 Schema，编写数据生成脚本](https://github.com/ceilf6/Wiki/commit/5c1c50ccd380fc6fc538120a054a9ba222f73e4b)
 - [Unsloth SFT 微调训练脚本](https://github.com/ceilf6/Wiki/commit/52d9fbd055a613cbe4a0c66478327d0bfd5a1c42)
 - [推理评估脚本](https://github.com/ceilf6/Wiki/commit/b56b63b1808b0e19fe98ca8785a04c12b0d38c44)
+- [HuggingFace 发布脚本](https://github.com/ceilf6/Wiki/commit/d7f86fc941a52db7b8624e283315dbe23647db5e)
