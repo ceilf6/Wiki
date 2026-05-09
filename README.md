@@ -346,5 +346,3 @@
 - [Unsloth SFT 微调训练脚本](https://github.com/ceilf6/Wiki/commit/52d9fbd055a613cbe4a0c66478327d0bfd5a1c42)
 - [推理评估脚本](https://github.com/ceilf6/Wiki/commit/b56b63b1808b0e19fe98ca8785a04c12b0d38c44)
 - [HuggingFace 发布脚本](https://github.com/ceilf6/Wiki/commit/d7f86fc941a52db7b8624e283315dbe23647db5e)
-- [.env 路径指向父目录](https://github.com/ceilf6/Wiki/commit/8bb9ec4ef3049f877138bdfc66e100e2c262ef63)
-- [generate_data 支持 .env 配置和自定义 base_url](https://github.com/ceilf6/Wiki/commit/ccf27b9b275bf1eb9add44b54e83927b3549e84f)
