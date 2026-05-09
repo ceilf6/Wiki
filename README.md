@@ -346,3 +346,4 @@
 - [Unsloth SFT 微调训练脚本](https://github.com/ceilf6/Wiki/commit/52d9fbd055a613cbe4a0c66478327d0bfd5a1c42)
 - [推理评估脚本](https://github.com/ceilf6/Wiki/commit/b56b63b1808b0e19fe98ca8785a04c12b0d38c44)
 - [HuggingFace 发布脚本](https://github.com/ceilf6/Wiki/commit/d7f86fc941a52db7b8624e283315dbe23647db5e)
+- [工程提示词标明文件路径](https://github.com/ceilf6/Wiki/commit/2abd946a07b55e5a989d376fb38d5640c1050f86)
