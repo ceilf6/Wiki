@@ -348,3 +348,4 @@
 - [HuggingFace 发布脚本](https://github.com/ceilf6/Wiki/commit/d7f86fc941a52db7b8624e283315dbe23647db5e)
 - [工程提示词标明文件路径](https://github.com/ceilf6/Wiki/commit/2abd946a07b55e5a989d376fb38d5640c1050f86)
 - [直接加载 LoRA adapter，但 adapter 不是完整模型，需要先加载基座模型再套 adapter](https://github.com/ceilf6/Wiki/commit/ece28b9b678fb4b5d629903d08fba38dda09e72e)
+- [Claude 蒸馏了 Qwen 进行 SFT 的 LoRA 模型](https://huggingface.co/ceilf6/frontagent-planner-7B-lora)
