@@ -1,0 +1,16 @@
+curl --location --request POST 'https://api.xiaomimimo.com/v1/chat/completions' \
+--header "Authorization: Bearer $MIMO_API_KEY" \
+--header "Content-Type: application/json" \
+--data-raw '{
+    "model": "mimo-v2.5",
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are MiMo, an AI assistant developed by Xiaomi."
+        },
+        {
+            "role": "user",
+            "content": "第二大的呢"
+        }
+    ]
+}'
