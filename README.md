@@ -350,3 +350,4 @@
 - [直接加载 LoRA adapter，但 adapter 不是完整模型，需要先加载基座模型再套 adapter](https://github.com/ceilf6/Wiki/commit/ece28b9b678fb4b5d629903d08fba38dda09e72e)
 - [Claude 蒸馏了 Qwen 进行 SFT 的 LoRA 模型](https://huggingface.co/ceilf6/frontagent-planner-7B-lora)
 - [session 带上了 context 上下文 - “记忆”](https://github.com/ceilf6/Wiki/commit/978900319d0a2dabf83a93d099a7fe71183b6f16)
+- [蒸馏 MCP 服务支持，方便外部大模型调用功能](https://github.com/ceilf6/Wiki/commit/f6d5c50219516ca78dab1ee63a328bc9d1be5d44)
