@@ -11,6 +11,14 @@
 			"gallery": "https://api.mcp.github.com",
 			"version": "0.25.0"
 		},
+		"frontagent": {
+			"command": "/opt/homebrew/bin/node",
+			"args": [
+			"/opt/homebrew/bin/fa",
+			"mcp",
+			"serve"
+			]
+		}
 		// "com.figma.mcp/mcp": {
 		// 	"type": "http",
 		// 	"url": "https://mcp.figma.com/mcp",
