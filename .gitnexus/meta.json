@@ -1,14 +1,29 @@
 {
-  "repoPath": "/Users/ceilf6/Desktop/myrepos/Wiki",
-  "lastCommit": "6dfb710986b25fa13f82da613b8b2b3c15c90c02",
-  "indexedAt": "2026-05-06T07:59:16.171Z",
-  "remoteUrl": "https://github.com/ceilf6/Wiki",
+  "repoPath": "/Users/a86198/Desktop/Wiki",
+  "lastCommit": "ccddd6b0781da1677807da907337819b3553dd02",
+  "indexedAt": "2026-05-12T05:44:19.840Z",
+  "remoteUrl": "https://github.com/ceilf6/Lab",
   "stats": {
-    "files": 20067,
-    "nodes": 308120,
-    "edges": 857659,
-    "communities": 7373,
+    "files": 18478,
+    "nodes": 286820,
+    "edges": 800402,
+    "communities": 7244,
     "processes": 300,
     "embeddings": 0
+  },
+  "capabilities": {
+    "graph": {
+      "provider": "ladybugdb",
+      "status": "available"
+    },
+    "fts": {
+      "provider": "ladybugdb-fts",
+      "status": "available"
+    },
+    "vectorSearch": {
+      "provider": "ladybugdb-vector",
+      "status": "unavailable",
+      "exactScanLimit": 10000
+    }
   }
 }
