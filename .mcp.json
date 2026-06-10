@@ -2,12 +2,12 @@
   "mcpServers": {
     "cgc": {
       "type": "stdio",
-      "command": "codegraphcontext",
+      "command": "/Users/a86198/.local/bin/cgc",
       "args": ["mcp", "start"]
     },
     "deepwiki": {
       "type": "streamable-http",
-      "serverUrl": "https://mcp.deepwiki.com/mcp"
+      "url": "https://mcp.deepwiki.com/mcp"
     }
   }
 }
