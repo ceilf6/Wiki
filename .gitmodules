@@ -21,7 +21,7 @@
 	url = https://github.com/ceilf6/hooks
 [submodule "AI/3-Application/FrontAgent-app"]
 	path = AI/3-Application/FrontAgent-app
-	url = https://github.com/ceilf6/FrontAgent
+	url = https://github.com/FrontAgent/FrontAgent
 	branch = develop
 [submodule "AI/2-AI-infra/LLM-SDK/Langchain-source"]
 	path = AI/2-AI-infra/LLM-SDK/Langchain-source
