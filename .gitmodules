@@ -67,3 +67,6 @@
 [submodule "AI/3-Application/repo-guard-app"]
 	path = AI/3-Application/repo-guard-app
 	url = https://github.com/ceilf6/repo-guard
+[submodule "AI/backup/IP-USA-app"]
+	path = AI/backup/IP-USA-app
+	url = https://github.com/ceilf6/IP-USA
