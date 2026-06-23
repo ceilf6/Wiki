@@ -73,3 +73,6 @@
 [submodule "AI/2-AI-infra/Websense-app"]
 	path = AI/2-AI-infra/Websense-app
 	url = https://github.com/ceilf6/websense
+[submodule "AI/2-AI-infra/Harness-kit-app"]
+	path = AI/2-AI-infra/Harness-kit-app
+	url = https://github.com/ceilf6/harness-kit
