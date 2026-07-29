@@ -27,7 +27,7 @@ export default function PlatformCard({ platform, index }: Props) {
         <span className="card-glyph" aria-hidden="true">
           {platform.glyph}
         </span>
-        <div className="card-title-block">
+        <div>
           <h2 className="card-name">{platform.name}</h2>
           <p className="card-latin">{platform.latin}</p>
         </div>

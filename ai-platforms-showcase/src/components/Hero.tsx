@@ -1,7 +1,7 @@
 export default function Hero() {
   return (
     <header className="hero">
-      <div className="hero-inner">
+      <div>
         <p className="hero-eyebrow load-rise" style={{ animationDelay: '0.05s' }}>
           OBSERVATORY&nbsp;&nbsp;·&nbsp;&nbsp;二〇二六观测年鉴&nbsp;&nbsp;·&nbsp;&nbsp;N°08
         </p>
