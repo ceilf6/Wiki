@@ -375,10 +375,6 @@ body {
   border-color: var(--brand);
 }
 
-.card-link-arrow {
-  transition: translate 0.25s ease;
-}
-
 /* ————— 页脚 ————— */
 .footer {
   position: relative;
