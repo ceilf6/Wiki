@@ -57,7 +57,7 @@ export default function PlatformCard({ platform, index }: Props) {
         rel="noopener noreferrer"
       >
         前往观测
-        <span className="card-link-arrow" aria-hidden="true">
+        <span aria-hidden="true">
           →
         </span>
       </a>
