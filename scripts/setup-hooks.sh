@@ -5,6 +5,7 @@
 # 目标：
 # 1. 终端里的 git push 成功后，若当前位于子模块，则自动同步 Wiki 父仓库
 # 2. VS Code Source Control 使用仓库内的 git-wrapper.sh，从而具备同样能力
+# 3. 安装 pre-push 钩子：push 前 review 知识库同步状态（只报告、不阻断）
 
 set -e
 
@@ -12,6 +13,8 @@ REPO_ROOT=$(cd "$(dirname "$0")/.." && pwd)
 ZSHRC="$HOME/.zshrc"
 HOOK_SCRIPT="$REPO_ROOT/.githooks/submodule/post-push"
 WRAPPER_SCRIPT="$REPO_ROOT/.githooks/git-wrapper.sh"
+PRE_PUSH_SCRIPT="$REPO_ROOT/.githooks/pre-push"
+REVIEW_SCRIPT="$REPO_ROOT/.githooks/knowledge-base-review.sh"
 BEGIN_MARKER="# >>> Wiki submodule post-push sync <<<"
 END_MARKER="# <<< Wiki submodule post-push sync <<<"
 SHELL_BLOCK=$(cat <<EOF
@@ -162,11 +165,45 @@ configure_vscode_settings() {
   esac
 }
 
+ensure_pre_push_hook() {
+  echo ">>> 安装 pre-push 钩子（知识库 review）..."
+
+  HOOKS_DIR=$(cd "$REPO_ROOT" && git rev-parse --git-path hooks)
+  case "$HOOKS_DIR" in
+    /*) ;;
+    *) HOOKS_DIR="$REPO_ROOT/$HOOKS_DIR" ;;
+  esac
+  mkdir -p "$HOOKS_DIR"
+  TARGET="$HOOKS_DIR/pre-push"
+
+  # 不用 core.hooksPath：那会让整个 .git/hooks 目录失效，
+  # 连带停掉 yorkie / git-lfs 已经装好的其他钩子。改为装一层 shim。
+  if [ -f "$TARGET" ] && ! grep -q "githooks/pre-push" "$TARGET" 2>/dev/null; then
+    cp "$TARGET" "$TARGET.pre-kb-review.bak"
+    echo ">>> 已备份原 pre-push 到 $TARGET.pre-kb-review.bak"
+  fi
+
+  cat > "$TARGET" << 'HOOK_EOF'
+#!/bin/sh
+# 由 scripts/setup-hooks.sh 生成的 shim —— 真实逻辑在受版本控制的 .githooks/pre-push
+# （知识库 review + git-lfs 串联；改逻辑改那个文件即可，无需重跑 setup）
+ROOT=$(git rev-parse --show-toplevel 2>/dev/null)
+[ -n "$ROOT" ] && [ -f "$ROOT/.githooks/pre-push" ] || exit 0
+exec sh "$ROOT/.githooks/pre-push" "$@"
+HOOK_EOF
+  chmod +x "$TARGET"
+  echo ">>> pre-push 已安装: $TARGET"
+}
+
 ensure_zsh_wrapper
 
 chmod +x "$HOOK_SCRIPT"
 chmod +x "$WRAPPER_SCRIPT"
+chmod +x "$PRE_PUSH_SCRIPT"
+chmod +x "$REVIEW_SCRIPT"
 echo ">>> git 包装脚本已就绪: $WRAPPER_SCRIPT"
+
+ensure_pre_push_hook
 
 configure_vscode_settings
 

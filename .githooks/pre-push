@@ -1,0 +1,34 @@
+#!/bin/sh
+# ---------------------------------------------------------------------------
+# pre-push 分发器（受版本控制，由 scripts/setup-hooks.sh 安装到 .git/hooks/pre-push）
+#
+# 串两件事：
+#   1. 知识库同步 review —— 只报告、不阻断
+#   2. git-lfs pre-push  —— 原有行为，退出码以它为准
+#
+# 关键：pre-push 的推送范围是从 stdin 读的（<local ref> <local sha> <remote ref>
+# <remote sha>），两个消费者都要用。stdin 只能读一次，所以先落到临时文件再分发；
+# 否则谁先读谁独占，另一个拿到空输入 —— git-lfs 那侧会表现为「上传静默失效」。
+# ---------------------------------------------------------------------------
+
+set -u
+
+ROOT=$(git rev-parse --show-toplevel 2>/dev/null)
+
+PAYLOAD=$(mktemp "${TMPDIR:-/tmp}/pre-push-payload.XXXXXX") || exit 0
+trap 'rm -f "$PAYLOAD"' EXIT INT TERM
+cat > "$PAYLOAD"
+
+# --- 1. 知识库 review（永不阻断）-------------------------------------------
+REVIEW="$ROOT/.githooks/knowledge-base-review.sh"
+if [ -n "${ROOT:-}" ] && [ -f "$REVIEW" ]; then
+  sh "$REVIEW" < "$PAYLOAD" || true
+fi
+
+# --- 2. git-lfs（退出码以它为准）-------------------------------------------
+if ! command -v git-lfs >/dev/null 2>&1; then
+  printf >&2 "\n%s\n\n" "This repository is configured for Git LFS but 'git-lfs' was not found on your path. If you no longer wish to use Git LFS, remove this hook by deleting the 'pre-push' file in the hooks directory (set by 'core.hookspath'; usually '.git/hooks')."
+  exit 2
+fi
+
+git lfs pre-push "$@" < "$PAYLOAD"
